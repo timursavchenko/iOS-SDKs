@@ -1,0 +1,19 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+uuids:
+  - target:          armv7-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          armv7s-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-ios
+    value:           66B9FED7-4170-3BE1-9422-63085A4B0A1C
+  - target:          arm64e-ios
+    value:           B8A5AA17-14E9-37FD-AF1F-DE8776FD295A
+install-name:    '/usr/lib/swift/libswiftCarPlay.dylib'
+current-version: 195.5
+swift-abi-version: 7
+exports:
+  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
+    symbols:         [ '__swift_FORCE_LOAD_$_swiftCarPlay' ]
+...

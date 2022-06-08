@@ -1,0 +1,47 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+uuids:
+  - target:          armv7-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          armv7s-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-ios
+    value:           1B5837AA-20E0-32C7-8A94-E57F29476434
+  - target:          arm64e-ios
+    value:           6081D3F2-B230-36BA-9A26-412EF1074A29
+install-name:    '/System/Library/Frameworks/MetricKit.framework/MetricKit'
+reexported-libraries:
+  - targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+    libraries:       [ '/System/Library/PrivateFrameworks/SignpostMetrics.framework/SignpostMetrics' ]
+exports:
+  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
+    symbols:         [ _MetricKitVersionNumber, _MetricKitVersionString ]
+    objc-classes:    [ MXAnimationMetric, MXAppExitMetric, MXAppLaunchMetric, MXAppResponsivenessMetric, 
+                       MXAppRunTimeMetric, MXAverage, MXBackgroundExitData, MXCPUExceptionDiagnostic, 
+                       MXCPUMetric, MXCallStackFrame, MXCallStackThread, MXCallStackTree, 
+                       MXCellularConditionMetric, MXCrashDiagnostic, MXDiagnostic, 
+                       MXDiagnosticPayload, MXDiskIOMetric, MXDiskWriteExceptionDiagnostic, 
+                       MXDisplayMetric, MXForegroundExitData, MXGPUMetric, MXHangDiagnostic, 
+                       MXHistogram, MXHistogramBucket, MXLocationActivityMetric, 
+                       MXMemoryMetric, MXMetaData, MXMetric, MXMetricManager, MXMetricPayload, 
+                       MXNetworkTransferMetric, MXSignpostIntervalData, MXSignpostMetric, 
+                       MXUnitAveragePixelLuminance, MXUnitSignalBars ]
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+uuids:
+  - target:          armv7-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          armv7s-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-ios
+    value:           25E3CC2E-AA7A-3CB9-81FB-AE455862AD26
+  - target:          arm64e-ios
+    value:           3799BE16-0329-3D81-964F-48E25143C246
+install-name:    '/System/Library/PrivateFrameworks/SignpostMetrics.framework/SignpostMetrics'
+current-version: 69
+exports:
+  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
+    symbols:         [ __MXSignpostMetricsSnapshot ]
+...

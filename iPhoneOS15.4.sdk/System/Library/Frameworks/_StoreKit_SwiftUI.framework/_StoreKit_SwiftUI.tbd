@@ -1,0 +1,23 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+uuids:
+  - target:          armv7-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          armv7s-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-ios
+    value:           67E4B15F-F9C4-3279-BF0E-26DA766574C0
+  - target:          arm64e-ios
+    value:           554D229A-0312-30D8-819D-01DFEB65673C
+install-name:    '/System/Library/Frameworks/_StoreKit_SwiftUI.framework/_StoreKit_SwiftUI'
+swift-abi-version: 7
+exports:
+  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
+    symbols:         [ '_$s7SwiftUI4ViewP010_StoreKit_aB0E03appD7Overlay11isPresented13configurationQrAA7BindingVySbG_So22SKOverlayConfigurationCyctF', 
+                       '_$s7SwiftUI4ViewP010_StoreKit_aB0E03appD7Overlay11isPresented13configurationQrAA7BindingVySbG_So22SKOverlayConfigurationCyctFQOMQ', 
+                       '_$s7SwiftUI4ViewP010_StoreKit_aB0E18refundRequestSheet3for11isPresented9onDismissQrs6UInt64V_AA7BindingVySbGys6ResultOy0dE011TransactionV06RefundG6StatusOAR0rG5ErrorOGcSgtF', 
+                       '_$s7SwiftUI4ViewP010_StoreKit_aB0E18refundRequestSheet3for11isPresented9onDismissQrs6UInt64V_AA7BindingVySbGys6ResultOy0dE011TransactionV06RefundG6StatusOAR0rG5ErrorOGcSgtFQOMQ', 
+                       '_$s7SwiftUI4ViewP010_StoreKit_aB0E24manageSubscriptionsSheet11isPresentedQrAA7BindingVySbG_tF', 
+                       '_$s7SwiftUI4ViewP010_StoreKit_aB0E24manageSubscriptionsSheet11isPresentedQrAA7BindingVySbG_tFQOMQ' ]
+...

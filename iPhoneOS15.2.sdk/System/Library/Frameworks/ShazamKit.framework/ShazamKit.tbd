@@ -1,0 +1,37 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+uuids:
+  - target:          armv7-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          armv7s-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-ios
+    value:           2A678E75-B3FE-36D3-8E24-0F48BDD529E5
+  - target:          arm64e-ios
+    value:           7D617F95-F4B6-379A-B71F-0CBBC54F194A
+install-name:    '/System/Library/Frameworks/ShazamKit.framework/ShazamKit'
+exports:
+  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
+    symbols:         [ _SHErrorDeviceToDeviceEncryptionKey, _SHErrorDiscardedAudioDurationKey, 
+                       _SHErrorDomain, _SHEventSignalIdentifierMusicRecognitionHistoryActivated, 
+                       _SHEventSignalIdentifierMusicRecognitionRecognitionActivated, 
+                       _SHMaximumSignatureDuration, _SHMediaItemAlbumName, _SHMediaItemAppleMusicID, 
+                       _SHMediaItemAppleMusicURL, _SHMediaItemArtist, _SHMediaItemArtworkURL, 
+                       _SHMediaItemAudioStartDate, _SHMediaItemExplicitContent, _SHMediaItemFrequencySkew, 
+                       _SHMediaItemGenres, _SHMediaItemISRC, _SHMediaItemLyricsSnippet, 
+                       _SHMediaItemMatchOffset, _SHMediaItemReleaseDate, _SHMediaItemShazamID, 
+                       _SHMediaItemSpeedSkew, _SHMediaItemStaticLyricLines, _SHMediaItemSubtitle, 
+                       _SHMediaItemSyncedLyricsSnippet, _SHMediaItemTitle, _SHMediaItemVideoURL, 
+                       _SHMediaItemWebURL, _SHMediaLibrarySyncTriggerInitialFetch, 
+                       _SHMediaLibrarySyncTriggerInitialUpload, _SHMediaLibrarySyncTriggerMigration, 
+                       _SHMediaLibrarySyncTriggerPushTriggered, _SHMediaLibrarySyncTriggerUserAction ]
+    objc-classes:    [ SHAttribution, SHCatalog, SHCustomCatalog, SHError, SHEventSignaller, 
+                       SHLyricLine, SHManagedSession, SHMatch, SHMatchedMediaItem, 
+                       SHMatcherResponse, SHMediaItem, SHMediaLibrary, SHMediaLibraryChange, 
+                       SHMediaLibraryGroup, SHMediaLibraryInfo, SHMediaLibraryItemMetadata, 
+                       SHMediaLibraryLabel, SHMediaLibraryQueryParameters, SHMediaLibrarySnapshot, 
+                       SHMediaLibraryTrack, SHMediaLibraryTrackBuilder, SHMediaLibraryTrackUpdate, 
+                       SHMutableSignature, SHSession, SHShazamCatalog, SHShazamKey, 
+                       SHSignature, SHSignatureGenerator, SHSyncedLyrics ]
+...

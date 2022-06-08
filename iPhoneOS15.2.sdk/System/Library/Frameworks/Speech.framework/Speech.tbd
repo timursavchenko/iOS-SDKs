@@ -1,0 +1,38 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+uuids:
+  - target:          armv7-ios
+    value:           97FC6EFF-07EF-398E-9D06-76176CD941CF
+  - target:          armv7s-ios
+    value:           B0C5C8D7-E6B8-3A4C-9F73-0558E5F29267
+  - target:          arm64-ios
+    value:           713CCD6B-DA34-3A59-8E08-DF07B548AF58
+  - target:          arm64e-ios
+    value:           A07397D8-B99B-390A-9CD4-155CB47BD94E
+install-name:    '/System/Library/Frameworks/Speech.framework/Speech'
+exports:
+  - targets:         [ armv7-ios, armv7s-ios ]
+    objc-classes:    [ SFSpeechRecordingRecognitionRequest ]
+  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
+    symbols:         [ _SFAnalyticsEventTypeGetName, _SFIsIOS, _SFIsInternalInstall, 
+                       _SFIsMac, _SFIsTV, _SFLSRDelegateGetInterface, _SFLSRGetInterface, 
+                       _SFSupportsANE, _kSFCoreAnalyticsAppnameKey, _kSFCoreAnalyticsAsrInitializationTimeKey, 
+                       _kSFCoreAnalyticsAudioDurationKey, _kSFCoreAnalyticsCpuRtfKey, 
+                       _kSFCoreAnalyticsErrorCode, _kSFCoreAnalyticsErrorDomain, 
+                       _kSFCoreAnalyticsIsFinalKey, _kSFCoreAnalyticsJitLmeProcessingTimeKey, 
+                       _kSFCoreAnalyticsLanguageKey, _kSFCoreAnalyticsModelLoadTimeKey, 
+                       _kSFCoreAnalyticsModelVersionKey, _kSFCoreAnalyticsNarrowbandKey, 
+                       _kSFCoreAnalyticsOndeviceKey, _kSFCoreAnalyticsRecognitionDurationKey, 
+                       _kSFCoreAnalyticsRecognitionResponseTimeKey, _kSFCoreAnalyticsSuccessKey, 
+                       _kSFCoreAnalyticsTTFWKey, _kSFCoreAnalyticsTaskKey, _kSFCoreAnalyticsTextNotEmptyKey, 
+                       _kSFHindiLocaleIdentifier, _kSFHindiTranslitKeyboardIdentifier, 
+                       _kSFHindiTranslitReplacementLocaleIdentifier, _kSFSpeechRecognizerTaskDictation, 
+                       _kSFSpeechRecognizerTaskVoiceMail ]
+    objc-classes:    [ SFAcousticFeature, SFLocalSpeechRecognitionClient, SFRequestParameters, 
+                       SFSpeechAssetManager, SFSpeechAudioBufferRecognitionRequest, 
+                       SFSpeechLanguageModel, SFSpeechRecognitionMetadata, SFSpeechRecognitionRequest, 
+                       SFSpeechRecognitionResult, SFSpeechRecognitionTask, SFSpeechRecognizer, 
+                       SFSpeechURLRecognitionRequest, SFTranscription, SFTranscriptionSegment, 
+                       SFUtilities, SFVoiceAnalytics, _SFSearchRequest, _SFSearchResult ]
+...

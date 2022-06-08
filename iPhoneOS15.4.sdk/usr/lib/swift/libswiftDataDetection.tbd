@@ -1,0 +1,19 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+uuids:
+  - target:          armv7-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          armv7s-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-ios
+    value:           3F5A6B94-F3FB-3F21-8BC1-92C260661717
+  - target:          arm64e-ios
+    value:           35F73C99-1456-315B-976E-1112FBFD2AB5
+install-name:    '/usr/lib/swift/libswiftDataDetection.dylib'
+current-version: 697.2
+swift-abi-version: 7
+exports:
+  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
+    symbols:         [ '__swift_FORCE_LOAD_$_swiftDataDetection' ]
+...

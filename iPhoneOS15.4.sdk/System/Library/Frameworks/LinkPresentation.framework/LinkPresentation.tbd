@@ -1,0 +1,71 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+uuids:
+  - target:          armv7-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          armv7s-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-ios
+    value:           DB736A12-89FD-3BD5-878B-1A6436E337AB
+  - target:          arm64e-ios
+    value:           0177BC0A-B716-31FB-9594-B85203D47F85
+install-name:    '/System/Library/Frameworks/LinkPresentation.framework/LinkPresentation'
+current-version: 185.8
+reexported-libraries:
+  - targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+    libraries:       [ '/System/Library/PrivateFrameworks/URLFormatting.framework/URLFormatting' ]
+exports:
+  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
+    symbols:         [ _LPErrorDomain, _LPLinkMetadataTypeIdentifier, _LPLogChannelFetching, 
+                       _LPLogChannelPlugin, _LPLogChannelSerialization, _LPLogChannelTranscoding, 
+                       _LPLogChannelUI, _LPLogChannelVideo, _LPYouTubePlayerErrorDomain ]
+    objc-classes:    [ LPARAsset, LPARAssetAttachmentSubstitute, LPARAssetMetadata, 
+                       LPARAssetProperties, LPAppLinkPresentationProperties, LPAppStoreStoryMetadata, 
+                       LPAppleMusicTVShowMetadata, LPAppleNewsMetadata, LPApplePhotosMomentMetadata, 
+                       LPApplePhotosStatusMetadata, LPAppleTVMetadata, LPArtworkMetadata, 
+                       LPAssociatedApplicationMetadata, LPAudio, LPAudioMetadata, 
+                       LPAudioProperties, LPBusinessChatMetadata, LPCaptionBarPresentationProperties, 
+                       LPCaptionButtonCollapsedPresentationProperties, LPCaptionButtonPresentationProperties, 
+                       LPCaptionPresentationProperties, LPCaptionRowPresentationProperties, 
+                       LPEvent, LPEventTimeline, LPFaceTimeInviteMetadata, LPFileMetadata, 
+                       LPGameCenterInvitationMetadata, LPIconMetadata, LPImage, LPImageAttachmentSubstitute, 
+                       LPImageMetadata, LPImagePresentationProperties, LPImageProperties, 
+                       LPInlineMediaPlaybackInformation, LPLinkHTMLGenerator, LPLinkHTMLTextGenerator, 
+                       LPLinkMetadata, LPLinkMetadataObserver, LPLinkMetadataPresentationTransformer, 
+                       LPLinkMetadataPreviewTransformer, LPLinkMetadataStatusTransformer, 
+                       LPLinkMetadataStoreTransformer, LPLinkView, LPLyricExcerptMetadata, 
+                       LPMIMETypeRegistry, LPMapCollectionMetadata, LPMapCollectionPublisherMetadata, 
+                       LPMapMetadata, LPMessagesPayload, LPMetadataProvider, LPMultipleMetadataPresentationTransformer, 
+                       LPPresentationSpecializations, LPSharingMetadataWrapper, LPSharingStatusMetadata, 
+                       LPSourceApplicationMetadata, LPSpecializationMetadata, LPStreamingAudioPlayer, 
+                       LPSummarizedLinkMetadata, LPTestingOverrides, LPVideo, LPVideoAttachmentSubstitute, 
+                       LPVideoMetadata, LPVideoProperties, LPWalletPassMetadata, 
+                       LPWebLinkPresentationProperties, LPYouTubePlayerView, LPYouTubeURLComponents, 
+                       LPiCloudFamilyInvitationMetadata, LPiCloudSharingMetadata, 
+                       LPiTunesMediaAlbumMetadata, LPiTunesMediaArtistMetadata, LPiTunesMediaAudioBookMetadata, 
+                       LPiTunesMediaBookMetadata, LPiTunesMediaMovieBundleMetadata, 
+                       LPiTunesMediaMovieMetadata, LPiTunesMediaMusicVideoMetadata, 
+                       LPiTunesMediaPlaylistMetadata, LPiTunesMediaPodcastEpisodeMetadata, 
+                       LPiTunesMediaPodcastMetadata, LPiTunesMediaRadioMetadata, 
+                       LPiTunesMediaSoftwareMetadata, LPiTunesMediaSongMetadata, 
+                       LPiTunesMediaTVEpisodeMetadata, LPiTunesMediaTVSeasonMetadata, 
+                       LPiTunesUserProfileMetadata ]
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+uuids:
+  - target:          armv7-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          armv7s-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-ios
+    value:           7201D8EF-7545-3CE9-A3D1-588C1A31600B
+  - target:          arm64e-ios
+    value:           BACE6F42-AE7E-3656-B472-888B23B0B810
+install-name:    '/System/Library/PrivateFrameworks/URLFormatting.framework/URLFormatting'
+current-version: 185.8
+exports:
+  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
+    objc-classes:    [ URLFormattingTestingOverrides ]
+...

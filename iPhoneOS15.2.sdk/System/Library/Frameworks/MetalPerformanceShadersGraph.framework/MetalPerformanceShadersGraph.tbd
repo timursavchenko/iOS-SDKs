@@ -1,0 +1,29 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+uuids:
+  - target:          armv7-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          armv7s-ios
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-ios
+    value:           8C0923C2-48D4-3CFA-8AF4-F7DB06426C3B
+  - target:          arm64e-ios
+    value:           6345A169-48E1-3DF2-AE5F-E64BB04F61DE
+install-name:    '/System/Library/Frameworks/MetalPerformanceShadersGraph.framework/MetalPerformanceShadersGraph'
+exports:
+  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
+    symbols:         [ _MPSGraphDeviceTypeANE, _MPSGraphDeviceTypeCPU ]
+    objc-classes:    [ MPSGraph, MPSGraphAdamOptimizer, MPSGraphCompilationDescriptor, 
+                       MPSGraphConvolution2DOpDescriptor, MPSGraphCreateSparseOpDescriptor, 
+                       MPSGraphCropResizeOpDescriptor, MPSGraphDepthwiseConvolution2DOpDescriptor, 
+                       MPSGraphDepthwiseConvolution3DOpDescriptor, MPSGraphDevice, 
+                       MPSGraphExecutable, MPSGraphExecutableDescriptor, MPSGraphExecutableExecutionDescriptor, 
+                       MPSGraphExecutionDescriptor, MPSGraphList, MPSGraphListData, 
+                       MPSGraphListType, MPSGraphOperation, MPSGraphOptimizer, MPSGraphPooling2DOpDescriptor, 
+                       MPSGraphPooling4DOpDescriptor, MPSGraphPruningDescriptor, 
+                       MPSGraphRandomOpDescriptor, MPSGraphShapedType, MPSGraphStencilOpDescriptor, 
+                       MPSGraphStochasticGradientDescentOptimizer, MPSGraphTensor, 
+                       MPSGraphTensorData, MPSGraphType, MPSGraphVariableInitializer, 
+                       MPSGraphVariableOp ]
+...

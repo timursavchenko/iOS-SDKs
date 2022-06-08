@@ -1,0 +1,23 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ armv7-ios, armv7s-ios, arm64-ios, arm64e-ios ]
+uuids:
+  - target:          armv7-ios
+    value:           C51F53C0-1112-37B8-BE32-F0532630CD34
+  - target:          armv7s-ios
+    value:           2F8C498F-AA39-31AC-A724-CDCA21C1D4F4
+  - target:          arm64-ios
+    value:           4D11E1B5-2A3E-3B2B-861F-D816E1F9EA8F
+  - target:          arm64e-ios
+    value:           A50B2988-B455-3CDB-95E6-7284E0BB3A9F
+install-name:    '/System/Library/Frameworks/HealthKitUI.framework/HealthKitUI'
+exports:
+  - targets:         [ armv7-ios, armv7s-ios ]
+    symbols:         [ _HKRingPercentageValueNoRing, _HKScrollPerformanceOptionCategoryKey ]
+    objc-classes:    [ HKAnimatableObject, HKAnimatableObjectPropertyAnimation, HKCGPointPropertyAnimation, 
+                       HKFloatPropertyAnimation, HKGLView, HKMetricColors, HKRingGroupController, 
+                       HKRingsView, _HKAnimatableProperty, _HKIcon, _HKRing ]
+  - targets:         [ arm64-ios, arm64e-ios, armv7-ios, armv7s-ios ]
+    symbols:         [ _HKHealthKitUIFrameworkBundle ]
+    objc-classes:    [ HKActivityRingView ]
+...
