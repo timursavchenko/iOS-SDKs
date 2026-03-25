@@ -1,0 +1,13 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/IdentityDocumentServicesUI.framework/IdentityDocumentServicesUI
+current-version:       8.255
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ _TtC26IdentityDocumentServicesUI43ISO18013MobileDocumentRequestSceneViewModel,
+                            _TtC26IdentityDocumentServicesUI46ISO18013MobileDocumentRawRequestSceneViewModel ]
+...

@@ -1,0 +1,49 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/AudioToolbox.framework/libAudioDSP.dylib
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _ABHelperCreateDescriptionFromASBD,
+                            _ABHelperCreateDescriptionFromAudioUnit,
+                            _ABHelperCreateDescriptionFromDSPGraph,
+                            _ABHelperCreateDescriptionFromDSPGraphBox,
+                            _ABHelperIsABTestModeOn,
+                            _ABHelperWriteJSONFileFromDescription,
+                            _DNNVAD_CreateInstance,
+                            _DNNVAD_CreateInstanceWithVersion,
+                            _DNNVAD_DestroyInstance, _DNNVAD_EnableLegacyVAD,
+                            _DNNVAD_GetPowerMeterValue,
+                            _DNNVAD_GetSoundActivityValue,
+                            _DNNVAD_GetSpeechProbabilityHardValue,
+                            _DNNVAD_GetSpeechProbabilitySoftValue,
+                            _DNNVAD_Initialize, _DNNVAD_IsInitialized,
+                            _DNNVAD_Process, _DNNVAD_Uninitialize,
+                            _GetAudioDSPManager,
+                            _RegisterAUVoiceIsolation_Unsearchable,
+                            _RegisterAudioUnits_Analyzer,
+                            _RegisterAudioUnits_Internal,
+                            _RegisterAudioUnits_InternalUnsearchable,
+                            _RegisterMovieRemixAUs_Unsearchable,
+                            _RegisterPublicAudioUnits, _gSpatialMetadataSPI ]
+    objc-classes:         [ AudioDSPUplinkSpeechMixerFactory,
+                            AudioDSPUplinkSpeechMixer_v1,
+                            AudioDSPUplinkSpeechMixer_v2, NeuralNetCache ]
+    objc-ivars:           [ AudioDSPUplinkSpeechMixerFactory._settings,
+                            AudioDSPUplinkSpeechMixerFactory._version,
+                            AudioDSPUplinkSpeechMixer_v1._graph,
+                            AudioDSPUplinkSpeechMixer_v1._graphAUPB,
+                            AudioDSPUplinkSpeechMixer_v1._graphErrorLogger,
+                            AudioDSPUplinkSpeechMixer_v1._graphInputSampleTime,
+                            AudioDSPUplinkSpeechMixer_v1._settings,
+                            AudioDSPUplinkSpeechMixer_v2._graph,
+                            AudioDSPUplinkSpeechMixer_v2._graphErrorLogger,
+                            AudioDSPUplinkSpeechMixer_v2._graphInputSampleTime,
+                            AudioDSPUplinkSpeechMixer_v2._graphRemoteProcessingBlockHost,
+                            AudioDSPUplinkSpeechMixer_v2._settings,
+                            NeuralNetCache._impl ]
+...

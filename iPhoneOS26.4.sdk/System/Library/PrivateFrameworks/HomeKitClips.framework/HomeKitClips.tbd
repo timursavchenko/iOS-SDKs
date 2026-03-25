@@ -1,0 +1,17 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/HomeKitClips.framework/HomeKitClips
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ HKCUtilities,
+                            _TtC12HomeKitClips27TransformableHMBCloudZoneID,
+                            _TtC12HomeKitClips31TransformableHMBShareInvitation,
+                            _TtC12HomeKitClips32TransformableHMBShareParticipant,
+                            _TtC12HomeKitClips35TransformableHMBModelCloudReference,
+                            _TtC12HomeKitClips38TransformableHMBShareInvitationContext ]
+...

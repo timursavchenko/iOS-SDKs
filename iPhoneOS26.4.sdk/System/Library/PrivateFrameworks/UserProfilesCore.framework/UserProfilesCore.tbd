@@ -1,0 +1,35 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/UserProfilesCore.framework/UserProfilesCore
+current-version:       194.40.56
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _UPDeviceClassDescription,
+                            _UPErrorFormattedDebugDescription, _UPErrorInfo,
+                            _UPErrorIsDomainAndCode, _UPErrorIsFromDomain,
+                            _UPLogCommon, _UPLogFileArchiver, _UPLogPlatform,
+                            _UPLogSubsystem, _UPMobileGestaltBuildVersion,
+                            _UPMobileGestaltDeviceClass,
+                            _UPMobileGestaltIsInternalBuild,
+                            _UPMobileGestaltProductType,
+                            _UPMobileGestaltSystemVersion,
+                            _UPPlatformDeviceClass, _UPPlatformIsDeviceClass,
+                            _UPPlatformIsInternalBuild,
+                            _UserProfilesCoreVersionNumber,
+                            _UserProfilesCoreVersionString ]
+    objc-classes:         [ UPPersistentContainer, UPPlatform, UPSoftwareVersion,
+                            UPStringsSetValueTransformer ]
+    objc-ivars:           [ UPPersistentContainer._context,
+                            UPPersistentContainer._persistentContainer,
+                            UPPersistentContainer._persistentContainerDescription,
+                            UPPlatform._buildVersion, UPPlatform._deviceClass,
+                            UPPlatform._productType, UPPlatform._supportsDaemon,
+                            UPPlatform._systemVersion,
+                            UPSoftwareVersion._majorVersion,
+                            UPSoftwareVersion._minorVersion,
+                            UPSoftwareVersion._updateVersion ]
+...

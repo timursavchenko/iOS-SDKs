@@ -1,0 +1,31 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/AccessorySensorManagerServices.framework/AccessorySensorManagerServices
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ ASMInertialOdometryServices, ASMPeripheralConfig,
+                            ASMPeripheralControlServices,
+                            ASMPeripheralInertialOdometryConfig ]
+    objc-ivars:           [ ASMInertialOdometryServices._clientID,
+                            ASMInertialOdometryServices._dispatchQueue,
+                            ASMInertialOdometryServices._inertialOdometryAvailabilityHandler,
+                            ASMInertialOdometryServices._inertialOdometryAvailabilityMap,
+                            ASMInertialOdometryServices._inertialOdometryDataReceivedHandler,
+                            ASMInertialOdometryServices._interruptionHandler,
+                            ASMInertialOdometryServices._invalidateCalled,
+                            ASMInertialOdometryServices._invalidateDone,
+                            ASMInertialOdometryServices._invalidationHandler,
+                            ASMInertialOdometryServices._xpcCnx,
+                            ASMPeripheralControlServices._clientID,
+                            ASMPeripheralControlServices._dispatchQueue,
+                            ASMPeripheralControlServices._interruptionHandler,
+                            ASMPeripheralControlServices._invalidateCalled,
+                            ASMPeripheralControlServices._invalidateDone,
+                            ASMPeripheralControlServices._invalidationHandler,
+                            ASMPeripheralControlServices._xpcCnx ]
+...

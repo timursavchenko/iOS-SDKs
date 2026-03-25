@@ -1,0 +1,27 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/CoreIDVDaemonSupport.framework/CoreIDVDaemonSupport
+current-version:       8.255
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ StoredAuthACL, StoredBiomeMetadata, StoredCredential,
+                            StoredCredentialOptions, StoredCryptoKey,
+                            StoredIdentifierRevocationList,
+                            StoredIdentityDocumentApplicationInstallation,
+                            StoredMobileDocumentReaderApplicationInstallation,
+                            StoredMobileDocumentReaderAttestationCertificate,
+                            StoredMobileDocumentReaderAuthenticationCertificate,
+                            StoredMobileDocumentReaderSigningKey,
+                            StoredMobileDocumentRegistration, StoredPayload,
+                            StoredPrearmTrust, StoredProofingBiomeData,
+                            StoredProofingDisplayMessage,
+                            StoredProofingDisplayMessageAction,
+                            StoredProofingSession, StoredRACCredential,
+                            StoredRACPresentment,
+                            StoredRandomizedBackgroundActivity,
+                            StoredRelyingParty, StoredTrustKey, StoredUploadAsset ]
+...

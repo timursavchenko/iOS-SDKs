@@ -1,0 +1,28 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/AudioDSPAnalysis.framework/AudioDSPAnalysis
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _AudioAnalysis_CreateAnalyzer,
+                            _RealTimeAudioIssueDetectorAnalyzeBuffer,
+                            _RealTimeAudioIssueDetectorCreate,
+                            _RealTimeAudioIssueDetectorDispose,
+                            _RealTimeAudioIssueDetectorInitialize,
+                            _RealTimeAudioIssueDetectorRemoveNode,
+                            _RealTimeAudioIssueDetectorReset,
+                            _RealTimeAudioIssueDetectorSetDownlinkVolume,
+                            _RealTimeAudioIssueDetectorSetNodeFormat,
+                            _RealTimeAudioIssueDetectorSetNodeFormatWithDirection,
+                            _RealTimeAudioIssueDetectorSetRouteSpecificDownlinkGainAdjustment,
+                            _RealTimeAudioIssueDetectorSetSmartCaseMicMute,
+                            _RealTimeAudioIssueDetectorSetUplinkMute,
+                            _RealTimeAudioIssueDetectorUpdateReportingSessions ]
+    objc-classes:         [ ADAAnalyzer, RTAIDManagerCallStateReporter ]
+    objc-ivars:           [ RTAIDManagerCallStateReporter._callConnected,
+                            RTAIDManagerCallStateReporter._callObserver ]
+...

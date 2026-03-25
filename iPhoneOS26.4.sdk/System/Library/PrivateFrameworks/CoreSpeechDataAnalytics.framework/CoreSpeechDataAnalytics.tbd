@@ -1,0 +1,17 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/CoreSpeechDataAnalytics.framework/CoreSpeechDataAnalytics
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _CoreSpeechDataAnalyticsVersionNumber,
+                            _CoreSpeechDataAnalyticsVersionString ]
+    objc-classes:         [ CSDADataAnalyticsController,
+                            _TtC23CoreSpeechDataAnalytics23DataAnalyticsController,
+                            _TtC23CoreSpeechDataAnalytics25DeterministicUserSelector ]
+    objc-ivars:           [ CSDADataAnalyticsController._analyticsController ]
+...

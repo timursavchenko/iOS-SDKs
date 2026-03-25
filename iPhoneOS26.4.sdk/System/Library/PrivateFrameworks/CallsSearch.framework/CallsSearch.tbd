@@ -1,0 +1,25 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/CallsSearch.framework/CallsSearch
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _CallsSearchVersionNumber, _CallsSearchVersionString ]
+    objc-classes:         [ CSSearchMetrics, MPAnalyticsLogger,
+                            MPContactSearchManager, MPContactsSearchController,
+                            MPSearchManager, MPSearchViewController,
+                            MPSuggestionsSearchController,
+                            MPSuggestionsSearchTableViewController,
+                            _TtC11CallsSearch16SearchFooterCell,
+                            _TtC11CallsSearch16SearchHeaderCell,
+                            _TtC11CallsSearch21ContactSearchViewCell,
+                            _TtC11CallsSearch24VoicemailUnreadIndicator,
+                            _TtC11CallsSearch25SuggestionsSearchViewCell,
+                            _TtC11CallsSearch27ContactAvatarCardController,
+                            _TtC11CallsSearch32ContactSearchTableViewController,
+                            _TtC11CallsSearch33SearchTableViewDiffableDataSource ]
+...

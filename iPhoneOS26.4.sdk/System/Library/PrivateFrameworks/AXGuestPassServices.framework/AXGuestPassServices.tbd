@@ -1,0 +1,19 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/AXGuestPassServices.framework/AXGuestPassServices
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _AXGuestPassManager,
+                            _AXGuestPassServicesVersionNumber,
+                            _AXGuestPassServicesVersionString ]
+    objc-classes:         [ AXGuestPassService,
+                            _TtC19AXGuestPassServices26AXGuestPassNetworkListener,
+                            _TtC19AXGuestPassServices27AXGuestPassAssertionManager,
+                            _TtC19AXGuestPassServices33AXGuestPassAcceptGestureAssertion,
+                            _TtC19AXGuestPassServices37AXGuestPassMonitorAcceptGestureAction ]
+...

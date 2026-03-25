@@ -1,0 +1,21 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/IconRendering.framework/IconRendering
+current-version:       92.2
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _IconRenderingVersionNumber,
+                            _IconRenderingVersionString ]
+    objc-classes:         [ ICREnvironment, ICRFinalizedIcon,
+                            ICRGlobalConfiguration, ICRIconLayer, ICRRenderingMode,
+                            ICRTexturePool,
+                            _TtC13IconRendering16DefaultIconShape,
+                            _TtC13IconRendering26SimulatedGlassChicletLayer,
+                            _TtC13IconRendering29ICRSimulatedGlassChicletLayer,
+                            _TtCCV13IconRendering7Texture6Buffer9Allocator,
+                            _TtCV13IconRendering7Texture6Buffer ]
+...

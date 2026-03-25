@@ -1,0 +1,53 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/CentauriController.framework/CentauriController
+current-version:       1
+compatibility-version: 1
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _CentauriControllerAllocateSecondaryMemory,
+                            _CentauriControllerCollectLogs,
+                            _CentauriControllerCollectLogsWithOptions,
+                            _CentauriControllerCreateWithParameters,
+                            _CentauriControllerFree,
+                            _CentauriControllerGetChipPower,
+                            _CentauriControllerGetChipState,
+                            _CentauriControllerGetCrashlogs,
+                            _CentauriControllerGetCurrentDriverInstance,
+                            _CentauriControllerGetProperty,
+                            _CentauriControllerMapSecondaryMemory,
+                            _CentauriControllerRegisterCrashlogHandler,
+                            _CentauriControllerRegisterUniqueErrorHandlerWithLoop,
+                            _CentauriControllerRegisterUniqueErrorHandlerWithQueue,
+                            _CentauriControllerReset,
+                            _CentauriControllerSendBootTimestamps,
+                            _CentauriControllerSetChipPower,
+                            _CentauriControllerSetHardwareHealth,
+                            _CentauriControllerSetLogSink,
+                            _CentauriControllerSetMemSwapRegions,
+                            _CentauriControllerSetProperty,
+                            _CentauriControllerSetWakeOnROM,
+                            _CentauriControllerUnmapSecondaryMemory,
+                            _kCentauriControllerPropertyBootTimestamps,
+                            _kCentauriControllerPropertyFirmwareBootArgs,
+                            _kCentauriControllerPropertyFirmwareBootTimestamps,
+                            _kCentauriControllerPropertyFusingConfig,
+                            _kCentauriControllerPropertyModuleVendor,
+                            _kCentauriControllerPropertyPowerTableVersions,
+                            _kCentauriControllerTimestampCCPUPingEnd,
+                            _kCentauriControllerTimestampCCPUPingStart,
+                            _kCentauriControllerTimestampFirstSendImageEnd,
+                            _kCentauriControllerTimestampFirstSendImageStart,
+                            _kCentauriControllerTimestampMemswapHandOffEnd,
+                            _kCentauriControllerTimestampMemswapHandOffStart,
+                            _kCentauriControllerTimestampOpenCCHIEnd,
+                            _kCentauriControllerTimestampOpenCCHIStart,
+                            _kCentauriControllerTimestampOpenROMEnd,
+                            _kCentauriControllerTimestampOpenROMStart,
+                            _kCentauriControllerTimestampOpenSecondStageEnd,
+                            _kCentauriControllerTimestampOpenSecondStageStart,
+                            _kCentauriControllerTimestampSecondSendImageEnd,
+                            _kCentauriControllerTimestampSecondSendImageStart ]
+...

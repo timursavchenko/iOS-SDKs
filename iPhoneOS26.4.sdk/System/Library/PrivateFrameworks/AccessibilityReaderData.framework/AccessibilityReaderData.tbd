@@ -1,0 +1,25 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/AccessibilityReaderData.framework/AccessibilityReaderData
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _AccessibilityReaderDataVersionNumber,
+                            _AccessibilityReaderDataVersionString ]
+    objc-classes:         [ AXFocusManagerObjCBridge, AXObserverWrapper,
+                            AXRImageDescriptorAppearance,
+                            _TtC23AccessibilityReaderData15AXRBlockManager,
+                            _TtC23AccessibilityReaderData15AXRuntimeClient,
+                            _TtC23AccessibilityReaderData20AXRNowPlayingManager,
+                            _TtC23AccessibilityReaderData22AXRViewInReaderService ]
+    objc-ivars:           [ AXFocusManagerObjCBridge._focusManager,
+                            AXObserverWrapper._handler,
+                            AXObserverWrapper._notifications,
+                            AXObserverWrapper._observer,
+                            AXObserverWrapper._runloop,
+                            AXObserverWrapper._systemElement ]
+...

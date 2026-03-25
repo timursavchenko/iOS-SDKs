@@ -1,0 +1,14 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /usr/lib/swift/libswiftCarPlay.dylib
+current-version:       515.17.3
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _$sSo14CPRouteSegmentC7CarPlayE11coordinatesSaySo22CPLocationCoordinate3DaGvpMV,
+                            _$sSo20CPNavigationWaypointC7CarPlayE11entryPointsSaySo22CPLocationCoordinate3DaGvpMV,
+                            __swift_FORCE_LOAD_$_swiftCarPlay ]
+...

@@ -1,0 +1,64 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/JetsamProperties.framework/JetsamProperties
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _JPActiveHardMemoryLimit, _JPActiveSoftMemoryLimit,
+                            _JPBoolForKey, _JPDictionaryForKey,
+                            _JPEntryEncodedLimitsKey,
+                            _JPEntryPropertyAddressLimit,
+                            _JPEntryPropertyAlwaysSIGTERMOnShutdown,
+                            _JPEntryPropertyCPUMonitorInterval,
+                            _JPEntryPropertyCPUMonitorPercentage,
+                            _JPEntryPropertyConclaveMemoryLimit,
+                            _JPEntryPropertyDarkBootSystemUIHardLimit,
+                            _JPEntryPropertyEnablePressuredExit,
+                            _JPEntryPropertyEnergyEfficiencyMode,
+                            _JPEntryPropertyFreezable,
+                            _JPEntryPropertyHardFileDescriptorLimit,
+                            _JPEntryPropertyHardKqWorkloopLimit,
+                            _JPEntryPropertyHardPortLimit,
+                            _JPEntryPropertyJetsamPriority,
+                            _JPEntryPropertyKernelHighWaterMark,
+                            _JPEntryPropertyLogicalWritesLimit,
+                            _JPEntryPropertyMSLActivatePostJetsam,
+                            _JPEntryPropertyMSLEnablementActivationRate,
+                            _JPEntryPropertyMSLEnablementMode,
+                            _JPEntryPropertyMSLMallocEnableMSLAtLimitWarning,
+                            _JPEntryPropertyMallocAggressiveMadvise,
+                            _JPEntryPropertyMallocLargeCache,
+                            _JPEntryPropertyMallocMaxMagazines,
+                            _JPEntryPropertyMallocMediumZone,
+                            _JPEntryPropertyMallocNanoZone,
+                            _JPEntryPropertyMallocSpaceEfficient,
+                            _JPEntryPropertyMemoryLimit,
+                            _JPEntryPropertyNoExcResourceDuringAudio,
+                            _JPEntryPropertyOSLogClientType,
+                            _JPEntryPropertyOSLogRTBufferConfig,
+                            _JPEntryPropertyOSLogRateLimit,
+                            _JPEntryPropertyRecoverOnCrash,
+                            _JPEntryPropertySoftFileDescriptorLimit,
+                            _JPEntryPropertySoftKqWorkloopLimit,
+                            _JPEntryPropertySoftPortLimit,
+                            _JPEntryPropertyThreadLimit,
+                            _JPEntryPropertyUserReclaimableLimit,
+                            _JPEntryPropertyWiredMemoryLimit,
+                            _JPEntryUnencodedLimitsKey,
+                            _JPInactiveHardMemoryLimit,
+                            _JPInactiveSoftMemoryLimit, _JPNumberForKey,
+                            _JPObjectOfClassForKey, _JPStringForKey,
+                            _JetsamPropertiesVersionNumber,
+                            _JetsamPropertiesVersionString, _is_darwin_os,
+                            _is_internal_os, _jp_entry_log, _jp_loader_log,
+                            _jp_reader_log ]
+    objc-classes:         [ JPEntry, JPLoader, JPMemoryLimitsTransformer, JPReader ]
+    objc-ivars:           [ JPEntry._config, JPEntry._globalConfig,
+                            JPLoader._filteredProperties,
+                            JPLoader._overrideFullPath, JPReader._entriesByType,
+                            JPReader._filteredProperties, JPReader._globalByType ]
+...

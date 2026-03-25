@@ -1,0 +1,18 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/SLOMCommon.framework/SLOMCommon
+current-version:       1.19
+compatibility-version: 1.19
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _SLOMErrorCopyDescription,
+                            _SLOMErrorCopyFailureReason, _SLOMErrorCreatePosix,
+                            _SLOMErrorGetCode, _SLOMErrorGetDomain,
+                            _SLOMErrorRelease, _SLOMErrorRetain,
+                            _kSLOMConfigDeviceHeadset, _kSLOMConfigDevicePhone,
+                            _kSLOMConfigDeviceWatch,
+                            _kSLOMConfigPresetOnlyOdometry,
+                            _kSLOMConfigPresetPoCVIOMappingBackend ]
+...

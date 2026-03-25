@@ -1,0 +1,46 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/_LocationEssentials.framework/_LocationEssentials
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _CLClientCreateIso6709Notation,
+                            _CLClientGetDistanceCoordinates,
+                            _CLClientGetDistanceHighPrecision,
+                            _CLClientSnapLocationToResolution,
+                            _CLLocationCoordinate2DGetDistanceFrom,
+                            _CLLocationCoordinate2DIsValid,
+                            _CLLocationCoordinate2DMake, _CLLocationDistanceMax,
+                            _CLTimeIntervalMax,
+                            _copyLocationsFromLocationMessagePayload,
+                            _kCLClientDistanceFilterNone,
+                            _kCLClientHeadingFilterNone, _kCLDistanceFilterNone,
+                            _kCLLocationAccuracyAggressivePrecisionReduction,
+                            _kCLLocationAccuracyBest,
+                            _kCLLocationAccuracyBestForNavigation,
+                            _kCLLocationAccuracyBystander,
+                            _kCLLocationAccuracyBystanderPreLoiOverride,
+                            _kCLLocationAccuracyE911CallInviteHigh,
+                            _kCLLocationAccuracyE911CallInviteLow,
+                            _kCLLocationAccuracyHundredMeters,
+                            _kCLLocationAccuracyKilometer,
+                            _kCLLocationAccuracyLeech,
+                            _kCLLocationAccuracyNearestTenMeters,
+                            _kCLLocationAccuracyPrecisionLimitation,
+                            _kCLLocationAccuracyReduced,
+                            _kCLLocationAccuracyRhythmicNonWaking,
+                            _kCLLocationAccuracyRhythmicWaking,
+                            _kCLLocationAccuracyThreeKilometers,
+                            _kCLLocationCoordinate2DInvalid,
+                            _kCLLocationIntegrityHigh, _kCLLocationIntegrityLow,
+                            _kCLLocationIntegrityMedium,
+                            _kCLLocationIntegrityNone ]
+    objc-classes:         [ CLFloor, CLLocation, CLLocationGnssOdometerInfo,
+                            CLLocationMatchInfo, CLLocationSourceInformation,
+                            CLLocationTrackRunInfo, _CLLocationFusionInfo,
+                            _CLLocationGroundAltitude ]
+...

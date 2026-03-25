@@ -1,0 +1,45 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSHost.framework/MPSHost
+current-version:       129.4.6
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ __Z27GetCpuTypeSubTypeFromStringP8NSString ]
+    objc-classes:         [ MPSNDArrayAffineQuantizationDescriptorHost,
+                            MPSNDArrayBinaryKernelHost,
+                            MPSNDArrayBinaryPrimaryGradientKernelHost,
+                            MPSNDArrayBinarySecondaryGradientKernelHost,
+                            MPSNDArrayConvolution2DDescriptorHost,
+                            MPSNDArrayConvolution2DGradientWithInputHost,
+                            MPSNDArrayConvolution2DGradientWithWeightsHost,
+                            MPSNDArrayConvolution2DHost,
+                            MPSNDArrayDepthwiseConvolutionKernelHost,
+                            MPSNDArrayDescriptorHost,
+                            MPSNDArrayGatherMatrixMultiplicationHost,
+                            MPSNDArrayHammingDistanceKernelHost,
+                            MPSNDArrayLUTQuantizationDescriptorHost,
+                            MPSNDArrayMatrixMultiplicationGradientHost,
+                            MPSNDArrayMatrixMultiplicationHost,
+                            MPSNDArrayMultiaryBaseHost,
+                            MPSNDArrayMultiaryGradientKernelHost,
+                            MPSNDArrayMultiaryKernelHost,
+                            MPSNDArrayQuantizationDescriptorHost,
+                            MPSNDArrayQuantizedConvolutionHost,
+                            MPSNDArrayQuantizedGatherMatrixMultiplicationHost,
+                            MPSNDArrayQuantizedMatrixMultiplicationHost,
+                            MPSNDArrayQuantizedScaledDotProductAttentionHost,
+                            MPSNDArrayResampleHost,
+                            MPSNDArrayScaledDotProductAttentionHost,
+                            MPSNDArrayStencilKernelHost,
+                            MPSNDArrayTileKernelHost, MPSNDArrayUnaryKernelHost ]
+    objc-ivars:           [ MPSNDArrayDescriptorHost._dataType,
+                            MPSNDArrayDescriptorHost._dimensionLengths,
+                            MPSNDArrayDescriptorHost._dimensionOrder,
+                            MPSNDArrayDescriptorHost._numberOfDimensions,
+                            MPSNDArrayDescriptorHost._preferPackedRows,
+                            MPSNDArrayDescriptorHost._rowBytes ]
+...

@@ -1,0 +1,30 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/SearchIntrospectionKit.framework/SearchIntrospectionKit
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _SearchIntrospectionKitVersionNumber,
+                            _SearchIntrospectionKitVersionString ]
+    objc-classes:         [ SFResultSectionsDidLoadFeedback, SIFeedbackListener,
+                            SIResponseHandler,
+                            _TtC22SearchIntrospectionKit10SIResponse,
+                            _TtC22SearchIntrospectionKit13SettingsQuery,
+                            _TtC22SearchIntrospectionKit14EmptyQueryType,
+                            _TtC22SearchIntrospectionKit14SIMailResponse,
+                            _TtC22SearchIntrospectionKit14SpotlightQuery,
+                            _TtC22SearchIntrospectionKit15SIResultSection,
+                            _TtC22SearchIntrospectionKit16SIQueryTransport,
+                            _TtC22SearchIntrospectionKit17EmptyResponseType,
+                            _TtC22SearchIntrospectionKit18SISettingsResponse,
+                            _TtC22SearchIntrospectionKit19SIResponseTransport,
+                            _TtC22SearchIntrospectionKit19SISpotlightResponse,
+                            _TtC22SearchIntrospectionKit23SIResultDidLoadFeedback,
+                            _TtC22SearchIntrospectionKit26SIApplicationClientService,
+                            _TtC22SearchIntrospectionKit8SIResult,
+                            _TtC22SearchIntrospectionKit9MailQuery ]
+...

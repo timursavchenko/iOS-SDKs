@@ -1,0 +1,28 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/AudioAccessoryAssetManagement.framework/AudioAccessoryAssetManagement
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ AMTranslationAssetInfo,
+                            AudioAccessoryAssetManagementClient ]
+    objc-ivars:           [ AMTranslationAssetInfo._assetStatus,
+                            AMTranslationAssetInfo._displayName,
+                            AMTranslationAssetInfo._isSuggested,
+                            AMTranslationAssetInfo._locale,
+                            AudioAccessoryAssetManagementClient._dispatchQueue,
+                            AudioAccessoryAssetManagementClient._downloadTranslationAssetsPid,
+                            AudioAccessoryAssetManagementClient._interruptionHandler,
+                            AudioAccessoryAssetManagementClient._invalidateCalled,
+                            AudioAccessoryAssetManagementClient._invalidateDone,
+                            AudioAccessoryAssetManagementClient._invalidationHandler,
+                            AudioAccessoryAssetManagementClient._processAssertion,
+                            AudioAccessoryAssetManagementClient._translationAssets,
+                            AudioAccessoryAssetManagementClient._translationAssetsInfoHandler,
+                            AudioAccessoryAssetManagementClient._xpcAADCnx,
+                            AudioAccessoryAssetManagementClient._xpcCnx ]
+...

@@ -1,0 +1,27 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/MediaSuggester.framework/MediaSuggester
+current-version:       0
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _MediaSuggesterVersionNumber,
+                            _MediaSuggesterVersionString,
+                            _os_feature_enabled_ranked_suggestions,
+                            _os_feature_enabled_use_suggested_entities ]
+    objc-classes:         [ MSAlbumArtwork, MSFeedback, MSFeedbackAction,
+                            MSIntentWrapper, MSLegacySuggester, MSRankedSuggester,
+                            MSSuggester, MSSuggesterRequestOptions, MSSuggestion,
+                            MSUnifiedMediaIntent,
+                            _TtC14MediaSuggester13MSWorkoutItem,
+                            _TtC14MediaSuggester16MSMediaContainer,
+                            _TtC14MediaSuggester16MSWorkoutManager,
+                            _TtC14MediaSuggester17MSPlayMediaIntent,
+                            _TtC14MediaSuggester18MSWorkoutMediaItem,
+                            _TtC14MediaSuggester20MSPlayMediaAppIntent,
+                            _TtC14MediaSuggester29MSMediaAppIntentsCacheManager,
+                            _TtC14MediaSuggester30MSMediaAppEntitiesCacheManager ]
+...

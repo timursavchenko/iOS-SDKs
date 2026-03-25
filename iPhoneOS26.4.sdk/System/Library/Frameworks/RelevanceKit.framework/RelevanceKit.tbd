@@ -1,0 +1,37 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/RelevanceKit.framework/RelevanceKit
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _RelevanceKitVersionNumber,
+                            _RelevanceKitVersionString ]
+    objc-classes:         [ LNDailyRoutineRelevantContext, LNDateRelevantContext,
+                            LNFallbackRelevantContext,
+                            LNLocationCategoryRelevantContext,
+                            LNLocationRelevantContext,
+                            LNMutualExclusionGroupRelevantContext,
+                            LNNearbyAudioDeviceRelevantContext,
+                            LNRegulatoryDomainRelevantContext, LNRelevantContext,
+                            RKDailyRoutineRelevantContext, RKDateRelevantContext,
+                            RKFallbackRelevantContext,
+                            RKLocationCategoryRelevantContext,
+                            RKLocationRelevantContext,
+                            RKMutualExclusionGroupRelevantContext,
+                            RKNearbyAudioDeviceRelevantContext,
+                            RKRegulatoryDomainRelevantContext, RKRelevantContext ]
+    objc-ivars:           [ RKDailyRoutineRelevantContext._situation,
+                            RKDateRelevantContext._endDate,
+                            RKDateRelevantContext._priority,
+                            RKDateRelevantContext._startDate,
+                            RKLocationCategoryRelevantContext._rawCategory,
+                            RKLocationRelevantContext._region,
+                            RKMutualExclusionGroupRelevantContext._groupIdentifier,
+                            RKNearbyAudioDeviceRelevantContext._deviceIdentifier,
+                            RKNearbyAudioDeviceRelevantContext._isPlaying,
+                            RKRegulatoryDomainRelevantContext._countryCodes ]
+...

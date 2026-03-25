@@ -1,0 +1,9 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ arm64e-ios ]
+install-name:    '/usr/lib/swift/libswiftHealthKit.dylib'
+current-version: 6200.5.85
+reexported-libraries:
+  - targets:         [ arm64e-ios ]
+    libraries:       [ '/System/Library/Frameworks/HealthKit.framework/HealthKit' ]
+...

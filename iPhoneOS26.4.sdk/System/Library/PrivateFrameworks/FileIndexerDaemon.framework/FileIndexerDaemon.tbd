@@ -1,0 +1,16 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/FileIndexerDaemon.framework/FileIndexerDaemon
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _FileIndexerDaemonVersionNumber,
+                            _FileIndexerDaemonVersionString ]
+    objc-classes:         [ _TtC17FileIndexerDaemon32FileIndexerSpotlightDaemonClient,
+                            _TtC17FileIndexerDaemon8FIDaemon,
+                            _TtC17FileIndexerDaemon9FIService ]
+...

@@ -1,0 +1,27 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/CallsAppServices.framework/CallsAppServices
+current-version:       0
+compatibility-version: 0
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _CallsAppServicesVersionNumber,
+                            _CallsAppServicesVersionString ]
+    objc-classes:         [ _TtC16CallsAppServices15RequestsHandler,
+                            _TtC16CallsAppServices18CallsSearchManager,
+                            _TtC16CallsAppServices18RecentCallProvider,
+                            _TtC16CallsAppServices21RecentsItemDataSource,
+                            _TtC16CallsAppServices22CallReportingViewModel,
+                            _TtC16CallsAppServices22CallStatusTextObserver,
+                            _TtC16CallsAppServices22ConversationDataSource,
+                            _TtC16CallsAppServices22VoicemailSearchManager,
+                            _TtC16CallsAppServices23PrioritizedCallObserver,
+                            _TtC16CallsAppServices24RequestsHandlerPresenter,
+                            _TtC16CallsAppServices25FaceTimeSpamReportManager,
+                            _TtC16CallsAppServices25RecentsUnreadCountManager,
+                            _TtC16CallsAppServices25SpotlightSearchDataSource,
+                            _TtC16CallsAppServices26ReminderInteractionMetrics ]
+...

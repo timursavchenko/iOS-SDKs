@@ -1,0 +1,61 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/SensitiveContentAnalysis.framework/SensitiveContentAnalysis
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _SCAError, _SCAErrorCausedBy, _SCAErrorDomain,
+                            _SCIsVCPDecompressionSessionSetContentAnalyzer2Available,
+                            _SCVCPDecompressionSessionSetContentAnalyzer,
+                            _SCVCPDecompressionSessionSetContentAnalyzer2,
+                            _SensitiveContentAnalysisVersionNumber,
+                            _SensitiveContentAnalysisVersionString,
+                            _kSCLogSubsystem, _kSCServiceEntitlement ]
+    objc-classes:         [ SCAParticipant, SCAnalysisHistory, SCAnalytics,
+                            SCAnalyticsConsent, SCEntitlements, SCFrameBuffer, SCLog,
+                            SCMADPolicyService, SCMADUserSafetyPolicy,
+                            SCMADVideoSession, SCMADVideoSessionResult,
+                            SCMADVideoSessionTTRFrame, SCManagedSettingsReader,
+                            SCMediaAnalysisService, SCSensitivityAnalysis,
+                            SCSensitivityAnalysisAvailabilityObserver,
+                            SCSensitivityAnalyzer, SCServicePolicyChecker,
+                            SCVideoStreamAnalyzer,
+                            _TtC24SensitiveContentAnalysis11SampleTimer,
+                            _TtC24SensitiveContentAnalysis19VideoStreamAnalyzer,
+                            _TtC24SensitiveContentAnalysis22AnalysisHistoryXPCHost,
+                            _TtC24SensitiveContentAnalysis23_AnalysisHistoryXPCHost,
+                            _TtC24SensitiveContentAnalysis28SCMediaAnalysisServiceResult,
+                            _TtC24SensitiveContentAnalysis29SampleTimerSecureCodingConfig,
+                            _TtC24SensitiveContentAnalysis29VideoStreamAnalysisDispatcher,
+                            _TtCC24SensitiveContentAnalysis15AnalysisHistoryP33_5B72C479793E9A28B06909F4B47E09798Listener,
+                            _TtCC24SensitiveContentAnalysis19VideoStreamAnalyzer7Sampler,
+                            _TtCV24SensitiveContentAnalysis16ParticipantJoinsP33_A1B455ED37557BDC9F886674143C91148Observer ]
+    objc-ivars:           [ SCAParticipant._displayName,
+                            SCAParticipant._firstName, SCAParticipant._handles,
+                            SCAParticipant._lastName,
+                            SCFrameBuffer._bufferInterval,
+                            SCFrameBuffer._frameLock, SCFrameBuffer._frames,
+                            SCFrameBuffer._maxFrames,
+                            SCFrameBuffer._pixelBufferPool,
+                            SCFrameBuffer._transferSession,
+                            SCMADPolicyService._service,
+                            SCMADUserSafetyPolicy._type,
+                            SCMADVideoSession._session,
+                            SCMADVideoSessionResult._analysis,
+                            SCMADVideoSessionResult._confidenceScore,
+                            SCMADVideoSessionTTRFrame._frame,
+                            SCMADVideoSessionTTRFrame._pixelBuffer,
+                            SCMADVideoSessionTTRFrame._timestamp,
+                            SCMediaAnalysisService._analytics,
+                            SCMediaAnalysisService._service,
+                            SCMediaAnalysisService._usedService,
+                            SCSensitivityAnalysisAvailabilityObserver._subscription,
+                            SCSensitivityAnalyzer._analytics,
+                            SCSensitivityAnalyzer._dispatchQueue,
+                            SCSensitivityAnalyzer._gvEnabled,
+                            SCSensitivityAnalyzer._madService ]
+...

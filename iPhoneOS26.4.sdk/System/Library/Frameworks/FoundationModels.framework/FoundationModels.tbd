@@ -1,0 +1,15 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/FoundationModels.framework/FoundationModels
+current-version:       1.4.34
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _AJAX_APPLICATION_ID, _FoundationModelsVersionNumber,
+                            _FoundationModelsVersionString,
+                            _consumerWasBuiltAgainstSDKWithUpdatedAdapter ]
+    objc-classes:         [ FMAjaxAuthenticator ]
+...

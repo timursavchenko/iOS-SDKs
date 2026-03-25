@@ -1,0 +1,19 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/SoftwareUpdateUIKit.framework/SoftwareUpdateUIKit
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ SUUITermsConditionsInterop,
+                            _TtC19SoftwareUpdateUIKit11TipsManager,
+                            _TtC19SoftwareUpdateUIKit25StatefulUIDelegateHandler ]
+    objc-ivars:           [ SUUITermsConditionsInterop._hostViewController,
+                            SUUITermsConditionsInterop._presentationAccount,
+                            SUUITermsConditionsInterop._presentationCompletion,
+                            SUUITermsConditionsInterop._remoteUIController,
+                            SUUITermsConditionsInterop._workQueue ]
+...

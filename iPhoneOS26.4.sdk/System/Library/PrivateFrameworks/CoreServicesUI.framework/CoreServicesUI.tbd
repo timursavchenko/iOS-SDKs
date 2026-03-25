@@ -1,0 +1,20 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/CoreServicesUI.framework/CoreServicesUI
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _CSUIErrorDomain ]
+    objc-classes:         [ CSUIBindable, CSUIOpenWithFlow,
+                            CSUIOpenWithMenuConfiguration,
+                            CSUIOpenWithMenuConstructor,
+                            CSUIOpenWithPreparedMenu, CSUISetHandlerFlow,
+                            _TtC14CoreServicesUI15CSUIBoundBundle,
+                            _TtC14CoreServicesUI30GetFileProviderStringOperation,
+                            _TtC14CoreServicesUI38OpenResourceOperationCompletionAdapter,
+                            _TtCE14CoreServicesUICSo24CSUIOpenWithPreparedMenuP33_66079D085FF6FB5157D5A6D61FF9E78423BoundBundlesObjcWrapper ]
+...

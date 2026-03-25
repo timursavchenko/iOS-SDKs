@@ -1,0 +1,35 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /usr/lib/libVinylNonUpdater.dylib
+current-version:       1
+compatibility-version: 1
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _DERDecodeItem, _DERDecodeItemPartialBuffer,
+                            _DERDecodeItemPartialBufferGetLength,
+                            _DERDecodeSeqContentInit, _DERDecodeSeqInit,
+                            _DERDecodeSeqNext,
+                            _DERDecodeSequenceContentWithBlock,
+                            _DERDecodeSequenceWithBlock, _DEREncodeItem,
+                            _DEREncodeItemSized, _DEREncodeLength,
+                            _DEREncodeLengthSized, _DEREncodeSequence,
+                            _DEREncodeSequenceFromObject,
+                            _DERLengthOfEncodedSequence,
+                            _DERLengthOfEncodedSequenceFromObject,
+                            _DERLengthOfItem, _DERLengthOfLength,
+                            _DERParseBitString, _DERParseBoolean,
+                            _DERParseBooleanWithDefault, _DERParseInteger,
+                            _DERParseInteger64, _DERParseInteger64Signed,
+                            _DERParseIntegerSigned, _DERParseSequence,
+                            _DERParseSequenceContent,
+                            _DERParseSequenceContentToObject,
+                            _DERParseSequenceToObject,
+                            _VinyleUICCPerformOperation,
+                            _VinyleUICCPerformOperationWithLink,
+                            _VinyleUICCPerformOperationWithLinkAndLogSync,
+                            _VinyleUICCPerformOperationWithLogSync,
+                            _VinyleUICCPerformOperationWithTransport,
+                            _VinyleUICCPerformOperationWithTransportAndLogSync ]
+...

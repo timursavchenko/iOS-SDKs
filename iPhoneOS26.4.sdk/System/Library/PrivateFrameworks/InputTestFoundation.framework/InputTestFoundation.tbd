@@ -1,0 +1,23 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/InputTestFoundation.framework/InputTestFoundation
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _InputTestFoundationVersionNumber,
+                            _InputTestFoundationVersionString ]
+    objc-classes:         [ ITFFeedbackHandler, ITFFeedbackListener,
+                            ITFWritingToolsDidReturnCompositionFeedback,
+                            ITFWritingToolsDidReturnRewriteFeedback,
+                            _TtC19InputTestFoundation27ITFApplicationClientService,
+                            _TtC19InputTestFoundation29ITFWritingToolsComposeRequest,
+                            _TtC19InputTestFoundation29ITFWritingToolsRewriteRequest,
+                            _TtC19InputTestFoundation30ITFWritingToolsComposeResponse,
+                            _TtC19InputTestFoundation30ITFWritingToolsRewriteResponse,
+                            _TtC19InputTestFoundation36ITFWritingToolsComposeResponseStream,
+                            _TtC19InputTestFoundation36ITFWritingToolsRewriteResponseStream ]
+...

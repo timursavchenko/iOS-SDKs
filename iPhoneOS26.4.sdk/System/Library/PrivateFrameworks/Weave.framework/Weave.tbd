@@ -1,0 +1,58 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/Weave.framework/Weave
+current-version:       5.100.6
+compatibility-version: 0
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _WVGetBootArgs, _WVGetClassesConformingToProtocol,
+                            _WVGetClassesConformingToProtocolAndImage,
+                            _WVGetMemoryFootprint, _WVGetSubclassesForClass,
+                            _WVLogMemoryFootprint, _WVPolarisOOLBootArgSet ]
+    objc-classes:         [ WVCalibrationSnapshot, WVCalibrationSnapshotImpl,
+                            WVCalibrationSnapshotLiveImpl,
+                            WVCalibrationSnapshotReplayImpl, WVClient,
+                            WVGraphProviderParameters, WVPolarisService,
+                            WVPowerManager, WVReplaySession, WVServer, WVService,
+                            WVServiceListener, WVWeakReference ]
+    objc-ivars:           [ WVCalibrationSnapshot._pImpl,
+                            WVCalibrationSnapshotImpl._calibrationBlob,
+                            WVClient._connection, WVClient._service,
+                            WVClient._synchronousService,
+                            WVGraphProviderParameters._calibrationSnapshot,
+                            WVGraphProviderParameters._replay,
+                            WVGraphProviderParameters._replayURL,
+                            WVPolarisService._requestedKeys,
+                            WVPolarisService._requestedKeysLock,
+                            WVPowerManager._delegate,
+                            WVPowerManager._notificationQueue,
+                            WVPowerManager._pm_ack_port,
+                            WVPowerManager._systemPowerNotifier,
+                            WVPowerManager._systemPowerPort,
+                            WVReplaySession._replayURL,
+                            WVServer._cachedGraphProviders,
+                            WVServer._calibrationSnapshot, WVServer._context,
+                            WVServer._currentGraphProviders,
+                            WVServer._currentServicesNotProvidingGraphs,
+                            WVServer._currentServicesProvidingGraphs,
+                            WVServer._graphCache, WVServer._graphProviderClasses,
+                            WVServer._graphProviderParameters,
+                            WVServer._isSleeping, WVServer._listener,
+                            WVServer._polarisService, WVServer._powerManager,
+                            WVServer._replaySession,
+                            WVServer._resourceKeyToGraphProviderClass,
+                            WVServer._serverParameters, WVServer._serviceQueue,
+                            WVServer._servicesNotProvidingGraphsLock,
+                            WVServer._session, WVServer._sleepingCondition,
+                            WVService._client, WVService._connection,
+                            WVService._delegate, WVService._synchronousClient,
+                            WVService._transaction, WVServiceListener._delegate,
+                            WVServiceListener._enableAnonymousListeners,
+                            WVServiceListener._listenerQueue,
+                            WVServiceListener._serviceNameToClass,
+                            WVServiceListener._serviceNameToListener,
+                            WVWeakReference._object ]
+...

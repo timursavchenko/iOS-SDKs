@@ -1,0 +1,21 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/AlarmKitCore.framework/AlarmKitCore
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _AlarmKitCoreVersionNumber,
+                            _AlarmKitCoreVersionString ]
+    objc-classes:         [ AKCDaemon, _TtC12AlarmKitCore11AlarmServer,
+                            _TtC12AlarmKitCore16AppEventObserver,
+                            _TtC12AlarmKitCore16ExecutorDelegate,
+                            _TtC12AlarmKitCore18StateCaptureServer,
+                            _TtC12AlarmKitCore19AuthorizationServer,
+                            _TtC12AlarmKitCore6Daemon ]
+    objc-ivars:           [ AKCDaemon._daemon, AKCDaemon._delegate,
+                            AKCDaemon._persistence ]
+...

@@ -1,0 +1,27 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/RespiratoryHealthUI.framework/RespiratoryHealthUI
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ HKRPWatchAppInstaller,
+                            RespiratoryHealthHeroCountdownLabel,
+                            RespiratoryHealthHeroView,
+                            _HKRPDefaultWatchAppsInstallProvider,
+                            _TtC19RespiratoryHealthUI27HKRPTallTableViewHeaderView ]
+    objc-ivars:           [ HKRPWatchAppInstaller._device,
+                            HKRPWatchAppInstaller._installAppsProviding,
+                            HKRPWatchAppInstaller._watchAppAvailability,
+                            RespiratoryHealthHeroView._countdownLabel,
+                            RespiratoryHealthHeroView._countdownLabelMediumFrame,
+                            RespiratoryHealthHeroView._heroImageMediumFrame,
+                            RespiratoryHealthHeroView._heroImageView,
+                            RespiratoryHealthHeroView._preferredWidth,
+                            RespiratoryHealthHeroView._watchImageMediumFrame,
+                            RespiratoryHealthHeroView._watchImageSize,
+                            RespiratoryHealthHeroView._watchImageView ]
+...

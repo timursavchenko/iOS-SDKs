@@ -1,0 +1,26 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/WebKit.framework/Frameworks/libWebKitSwift.dylib
+current-version:       624.1.16
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ CredentialUpdaterShim, WKISO18013Request,
+                            WKIdentityDocumentPresentmentController,
+                            WKIdentityDocumentPresentmentMobileDocumentElementInfo,
+                            WKIdentityDocumentPresentmentMobileDocumentIndividualDocumentRequest,
+                            WKIdentityDocumentPresentmentMobileDocumentPresentmentRequest,
+                            WKIdentityDocumentPresentmentMobileDocumentRequest,
+                            WKIdentityDocumentPresentmentRawRequest,
+                            WKIdentityDocumentPresentmentRequest,
+                            WKIdentityDocumentPresentmentRequestAuthenticationCertificate,
+                            WKIdentityDocumentPresentmentResponse,
+                            WKIdentityDocumentRawRequestValidator,
+                            WKIntelligenceReplacementTextEffectCoordinator,
+                            WKIntelligenceSmartReplyTextEffectCoordinator,
+                            WKMarketplaceKit, WKTextAnimationManager,
+                            _TtCE11WebKitSwiftCSo22WKTextAnimationManagerP33_7F8377AEF8C09D2172D24292EE3E51D715TextEffectChunk ]
+...

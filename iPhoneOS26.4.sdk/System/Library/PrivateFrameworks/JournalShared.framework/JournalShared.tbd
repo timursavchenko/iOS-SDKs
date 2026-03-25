@@ -1,0 +1,20 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/JournalShared.framework/JournalShared
+current-version:       49.100.8
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ AppStorageMO, JournalEntryAssetAttachmentMO,
+                            JournalEntryAssetFileAttachmentMO,
+                            JournalEntryAssetMO, JournalEntryMO, JournalMO,
+                            SyncDataMO, WrappedMergeableAppStorage,
+                            WrappedMergeableEntryAttributes,
+                            WrappedMergeableJournalAttributes,
+                            _TtC13JournalShared30MergeableAppStorageTransformer,
+                            _TtC13JournalShared35MergeableEntryAttributesTransformer,
+                            _TtC13JournalShared37MergeableJournalAttributesTransformer ]
+...

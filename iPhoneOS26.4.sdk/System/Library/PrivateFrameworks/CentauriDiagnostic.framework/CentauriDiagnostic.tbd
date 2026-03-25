@@ -1,0 +1,23 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/CentauriDiagnostic.framework/CentauriDiagnostic
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _CentauriDiagnosticVersionNumber,
+                            _CentauriDiagnosticVersionString,
+                            _collectClientLogsWithSizeAndOverride,
+                            _collectSubsystemLogsForClient, _isCentauriPlatform,
+                            _kCDFCollectionTimeLimitSeconds ]
+    objc-classes:         [ CDFAlphaDiagnostics, CDFBetaDiagnostics,
+                            CDFCollectionItem, CDFControlDiagnostics,
+                            CDFSubsystemDiagnostics ]
+    objc-ivars:           [ CDFCollectionItem._date, CDFCollectionItem._name,
+                            CDFCollectionItem._path, CDFCollectionItem._size,
+                            CDFSubsystemDiagnostics._buildEnv,
+                            CDFSubsystemDiagnostics._collectCoredumps ]
+...

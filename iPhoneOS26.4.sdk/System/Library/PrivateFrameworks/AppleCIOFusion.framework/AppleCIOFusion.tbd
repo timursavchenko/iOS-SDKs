@@ -1,0 +1,17 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/AppleCIOFusion.framework/AppleCIOFusion
+current-version:       1
+compatibility-version: 1
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _ciofusion_context_alloc, _ciofusion_context_free,
+                            _ciofusion_create, _ciofusion_destroy,
+                            _ciofusion_get_info,
+                            _ciofusion_get_send_to_nodes_allowed_masks,
+                            _ciofusion_receive_from_node,
+                            _ciofusion_receive_from_node_async,
+                            _ciofusion_send_to_nodes ]
+...

@@ -1,0 +1,25 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/DrawingBoard.framework/DrawingBoard
+current-version:       19
+compatibility-version: 0
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ _TtC12DrawingBoard14ProcessMonitor,
+                            _TtC12DrawingBoard16LocalWindowScene,
+                            _TtC12DrawingBoard19LocalSceneExtension,
+                            _TtC12DrawingBoard19UIPresenterObserver,
+                            _TtC12DrawingBoard21ObservedSettingsStore,
+                            _TtC12DrawingBoard23LocalSceneSpecification,
+                            _TtC12DrawingBoard27LocalSceneActivationContext,
+                            _TtCC12DrawingBoard19LocalSceneExtension13HostComponent,
+                            _TtCC12DrawingBoard19LocalSceneExtension15ClientComponent,
+                            _TtCC12DrawingBoard19LocalSceneExtension17SettingsExtension,
+                            _TtCCC12DrawingBoard19LocalSceneExtension17SettingsExtension17ContentBuilderBox,
+                            _TtCE12DrawingBoardCSo7FBScene8Observer,
+                            _TtCE12DrawingBoardCSo8FBSScene8Observer,
+                            _TtCV12DrawingBoard22WindowPropertiesReader6Reader ]
+...

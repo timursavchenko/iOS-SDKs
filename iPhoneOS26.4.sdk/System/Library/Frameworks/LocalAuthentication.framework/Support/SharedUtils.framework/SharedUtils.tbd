@@ -1,0 +1,37 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/LocalAuthentication.framework/Support/SharedUtils.framework/SharedUtils
+current-version:       2005.100.186
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _LAAssertionsProxyFactory, _LAErrorDomain,
+                            _LAErrorSubcodeKey,
+                            _LAFeatureFlagOysterSkipSDKVerification,
+                            _LALogCategoryForOptions, _LALogCategoryForPolicy,
+                            _LALogForCategory, _LALogForPolicy,
+                            _LALogSetProcessCategory, _LASerialScheduler,
+                            _LAStorageErrorDomain, _NSStringFromLAPasscodeType,
+                            __isSharedIPad ]
+    objc-classes:         [ LAACMBiometricAttemptNotifier, LAADMUser,
+                            LAAssertionsProxy, LADFR, LADecriptionBuilder,
+                            LAErrorHelper, LAErrorOysterRedactor, LAErrorRedactor,
+                            LAInternalProtocols, LAPasscodeHelper,
+                            LAPasscodeHelperPasscodeStateManagedSettings,
+                            LAPasscodeHelperPasscodeStateRepository,
+                            LAPasscodeHelperPasscodeStateSimulator,
+                            LASerialSchedulerInternal, LAUtils ]
+    objc-ivars:           [ LAAssertionsProxy._connection,
+                            LAAssertionsProxy._queue, LADFR._agentConnection,
+                            LADFR._xpcQueue, LADecriptionBuilder._components,
+                            LADecriptionBuilder._object,
+                            LAErrorOysterRedactor._defaults,
+                            LAErrorOysterRedactor._minSDKVersion,
+                            LASerialSchedulerInternal._pendingOperations,
+                            LASerialSchedulerInternal._performingPendingOperations,
+                            LASerialSchedulerInternal._running,
+                            LASerialSchedulerInternal._workQueue ]
+...

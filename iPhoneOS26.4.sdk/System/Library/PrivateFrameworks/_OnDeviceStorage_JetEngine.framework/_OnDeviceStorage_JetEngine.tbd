@@ -1,0 +1,17 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/_OnDeviceStorage_JetEngine.framework/_OnDeviceStorage_JetEngine
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    re-exports:           [ /System/Library/PrivateFrameworks/OnDeviceStorage.framework/OnDeviceStorage ]
+    objc-classes:         [ _JEAtomicCounter, _JEAtomicFlag,
+                            _TtC26_OnDeviceStorage_JetEngine15JSStorageObject,
+                            _TtC26_OnDeviceStorage_JetEngine18JSConnectionObject,
+                            _TtC26_OnDeviceStorage_JetEngine19JSAsyncPageIterator ]
+    objc-ivars:           [ _JEAtomicCounter._value, _JEAtomicFlag._value ]
+...

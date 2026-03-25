@@ -1,0 +1,37 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/ProductKit.framework/ProductKit
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _PKAdjustmentFiltersForAssetTypeAndURL,
+                            _PKPlaybackTimeRangesFromFeaturesTimeURL,
+                            _framework_log ]
+    objc-classes:         [ PKAVAssetUtilities, PKAdjustedImageView,
+                            PKMediaPlayerItem, PKMediaPlayerView,
+                            PKScreenUtilities, ProductKitCatalog,
+                            ProductKitCatalogInternal,
+                            _TtC10ProductKit17AdjustedImageView,
+                            _TtC10ProductKit17AdjustedVideoView,
+                            _TtC10ProductKit19FrameInletImageView,
+                            _TtC10ProductKit21PersonalizedImageView,
+                            _TtC10ProductKit21PersonalizedVideoView ]
+    objc-ivars:           [ PKMediaPlayerItem._completedHandler,
+                            PKMediaPlayerItem._observerToken,
+                            PKMediaPlayerItem._playbackNotificationTimeRanges,
+                            PKMediaPlayerItem._playerItems,
+                            PKMediaPlayerItem._shouldLoop,
+                            PKMediaPlayerItem._startedHandler,
+                            PKMediaPlayerItem._timeRangeHandler,
+                            PKMediaPlayerItem._url, PKMediaPlayerView._avLooper,
+                            PKMediaPlayerView._avQueuePlayer,
+                            PKMediaPlayerView._isKVOObserver,
+                            PKMediaPlayerView._mediaItems,
+                            PKMediaPlayerView._pausesAfterEachItem,
+                            PKMediaPlayerView._speedUpTimer,
+                            ProductKitCatalog._underlyingObject ]
+...

@@ -1,0 +1,12 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /usr/lib/swift/libswift_signal.dylib
+current-version:       377.100.15
+compatibility-version: 1
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    re-exports:           [ /usr/lib/swift/libswift_DarwinFoundation3.dylib ]
+    symbols:              [ __swift_FORCE_LOAD_$_swift_signal ]
+...

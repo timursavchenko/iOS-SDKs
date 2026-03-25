@@ -1,0 +1,18 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/SLOMMapping.framework/SLOMMapping
+current-version:       1.19
+compatibility-version: 1.19
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _SLOMMappingCalibrationRelease,
+                            _SLOMMappingCalibrationRetain,
+                            _SLOMMappingConfigRelease, _SLOMMappingConfigRetain,
+                            _SLOMMappingCreateCalibration,
+                            _SLOMMappingCreateConfig, _SLOMMappingSessionCreate,
+                            _SLOMMappingSessionRelease,
+                            _SLOMMappingSessionRetain ]
+...

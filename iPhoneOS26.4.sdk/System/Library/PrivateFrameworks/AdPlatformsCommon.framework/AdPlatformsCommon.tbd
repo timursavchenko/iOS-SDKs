@@ -1,0 +1,66 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/AdPlatformsCommon.framework/AdPlatformsCommon
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _APLegacyNewsContextKey,
+                            _APSupplementalContextBetweenArticleKey,
+                            _APSupplementalContextCreativeTypeKey,
+                            _APSupplementalContextCreativeTypeSponsorshipValue,
+                            _APSupplementalContextFeedMetadataContentProviderIdKey,
+                            _APSupplementalContextInArticleKey,
+                            _APSupplementalContextInFeedKey,
+                            _APSupplementalContextNativeInArticleKey,
+                            _APSupplementalContextNativeInFeedKey,
+                            _APSupplementalContextPlacementKey,
+                            _APSupplementalContextVideoInArticleKey,
+                            _APSupplementalContextVideoInFeedKey,
+                            _AdPlatformsCommonVersionNumber,
+                            _AdPlatformsCommonVersionString, _gProxyIsRunning,
+                            _kAPPIInternalProperty_ImpressionType,
+                            _kAPPIInternalProperty_Locale,
+                            _kAPPIInternalProperty_Placement,
+                            _kAPPIInternalProperty_PolicyDetail,
+                            _kAPPIInternalProperty_PolicyId,
+                            _kAPPIInternalProperty_PolicyReason,
+                            _kAPPIInternalProperty_QueryString,
+                            _kAPPIInternalProperty_Rank,
+                            _kAPPIInternalProperty_Storefront,
+                            _kAPPIInternalProperty_UnitId,
+                            _policyIdentifierToString,
+                            _policyImpressionTypeToString, _policyStateToString ]
+    objc-classes:         [ APAMSClientBagManager, APAdRequestContents,
+                            APContentData, APContentDepiction, APContext,
+                            APControllerRequesterCoordinator,
+                            APCoordinatedAdRequestBox,
+                            APCoordinatedProxyUrlRequestBox,
+                            APCoordinatedRankRequestBox, APCoordinatedRetryBox,
+                            APDeviceCapabilityEngine, APFrequencyCapData,
+                            APInstallAttribution, APJSVersionProvider,
+                            APLegacyFeatureFlags, APLegacyFeatureFlagsInternal,
+                            APMescalSigning, APMescalSigningRequestor,
+                            APPCControllerRequester, APPIEventSender, APPolicyData,
+                            APPolicyInstrumentation, APRepresentationData,
+                            APRequestCoordinator, APRotatingIdentifier,
+                            APRotatingIdentifierProvider, APTapAction,
+                            APTargetingCriteria, APTargetingDimensions,
+                            APTrialTriggerProvider, PCNativeAsset,
+                            PCNativeAssetInfo, PCNativeBorderStyle, PCNativeButton,
+                            PCNativeButtonStyle, PCNativeColor, PCNativeElement,
+                            PCNativeLocalizedHeadline, PCNativePrimitiveColor,
+                            PCNativeRepresentation, PCNativeShadowStyle,
+                            PCNativeStyle,
+                            _TtC17AdPlatformsCommon17JSVersionProvider,
+                            _TtC17AdPlatformsCommon18SponsorshipArchive,
+                            _TtC17AdPlatformsCommon22DeviceCapabilityEngine,
+                            _TtC17AdPlatformsCommon23NoPolicyInstrumentation,
+                            _TtC17AdPlatformsCommon28TracingPolicyInstrumentation,
+                            _TtC17AdPlatformsCommon29DeviceCapabilityConfiguration,
+                            _TtC17AdPlatformsCommon31NoDeviceCapabilityConfiguration,
+                            _TtC17AdPlatformsCommon35FeatureFlaggedPolicyInstrumentation ]
+...

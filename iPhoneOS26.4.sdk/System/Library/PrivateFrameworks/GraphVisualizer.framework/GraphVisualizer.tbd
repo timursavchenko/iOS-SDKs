@@ -1,0 +1,30 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/GraphVisualizer.framework/GraphVisualizer
+current-version:       0
+compatibility-version: 0
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ GVDummyNode, GVEdge, GVGraph, GVHorizontalRank,
+                            GVIntegerMap, GVLayout, GVNode, GVRank, GVUIntegerMap,
+                            GVVerticalRank ]
+    objc-ivars:           [ GVEdge.from, GVEdge.redundancy, GVEdge.redundancyMax,
+                            GVEdge.reversed, GVEdge.to, GVGraph._edges,
+                            GVGraph._groups, GVGraph._nodes, GVGraph._sinkNodes,
+                            GVGraph._sourceNodes, GVGraph.allowRedundantEdges,
+                            GVGraph.minimizeEdgeCrossings,
+                            GVGraph.minimizeEdgeLengths, GVGraph.randomSeed,
+                            GVIntegerMap._map, GVLayout.currentCrossings,
+                            GVLayout.direction, GVLayout.graphOrig,
+                            GVLayout.graphPart, GVLayout.graphParts,
+                            GVLayout.ranks, GVLayout.savedOrder,
+                            GVLayout.separation, GVNode.h, GVNode.inPriority,
+                            GVNode.index, GVNode.next, GVNode.outPriority,
+                            GVNode.prev, GVNode.rank, GVNode.w, GVNode.x, GVNode.y,
+                            GVRank.graph, GVRank.nextRank, GVRank.nodes,
+                            GVRank.prevRank, GVRank.rank, GVRank.separation,
+                            GVUIntegerMap._map ]
+...

@@ -1,0 +1,26 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/MediaControlReceiver.framework/MediaControlReceiver
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _APReceiverMediaRemoteXPCClient_CopyProperty,
+                            _APReceiverMediaRemoteXPCClient_SetDelegate,
+                            _APReceiverMediaRemoteXPCClient_SetProperty,
+                            _APReceiverMediaRemoteXPCClient_SetupReverseRemoteCommunicationChannel,
+                            _APReceiverMediaRemoteXPCClient_TeardownReverseRemoteCommunicationChannel,
+                            _AirPlayReceiverXPCClient_PostEvent,
+                            _AirPlayReceiverXPCClient_SetDelegate,
+                            _AirPlayReceiverXPCClient_SetDelegateWithQueue,
+                            _MediaControlReceiverCopyIdentity ]
+    objc-classes:         [ APReceiverMediaRemoteCommunicationChannel,
+                            APReceiverMediaRemoteCommunicationChannelInternal ]
+    objc-ivars:           [ APReceiverMediaRemoteCommunicationChannel._commChannel,
+                            APReceiverMediaRemoteCommunicationChannelInternal.invalidated,
+                            APReceiverMediaRemoteCommunicationChannelInternal.objectID,
+                            APReceiverMediaRemoteCommunicationChannelInternal.uuid ]
+...

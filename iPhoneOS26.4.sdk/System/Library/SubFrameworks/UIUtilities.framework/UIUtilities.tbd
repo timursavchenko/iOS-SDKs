@@ -1,0 +1,22 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/SubFrameworks/UIUtilities.framework/UIUtilities
+current-version:       9126.4.27
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ _UIDebugLogMessage, _UIDebugLogNode,
+                            _UIDebugLogNodeTreeStyle, _UIDebugLogStack,
+                            __UIDebugLogRootNode ]
+    objc-ivars:           [ _UIDebugLogMessage._string,
+                            _UIDebugLogNode._childMessages,
+                            _UIDebugLogNode._treeStyle,
+                            _UIDebugLogNodeTreeStyle._intermediate,
+                            _UIDebugLogNodeTreeStyle._lastNode,
+                            _UIDebugLogNodeTreeStyle._node,
+                            _UIDebugLogNodeTreeStyle._trailing,
+                            _UIDebugLogStack._stack ]
+...

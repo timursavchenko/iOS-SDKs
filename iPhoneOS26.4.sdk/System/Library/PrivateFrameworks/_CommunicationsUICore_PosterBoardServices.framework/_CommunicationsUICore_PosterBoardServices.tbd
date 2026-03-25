@@ -1,0 +1,17 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/_CommunicationsUICore_PosterBoardServices.framework/_CommunicationsUICore_PosterBoardServices
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ __CommunicationsUICore_PosterBoardServicesVersionNumber,
+                            __CommunicationsUICore_PosterBoardServicesVersionString ]
+    objc-classes:         [ _TtC41_CommunicationsUICore_PosterBoardServices11DimmingView,
+                            _TtC41_CommunicationsUICore_PosterBoardServices20PosterViewController,
+                            _TtC41_CommunicationsUICore_PosterBoardServices20TouchPassthroughView,
+                            _TtCC41_CommunicationsUICore_PosterBoardServices20PosterViewController21PosterStatusTextModel ]
+...

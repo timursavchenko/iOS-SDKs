@@ -1,0 +1,16 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/ByteMatrixVerification.framework/ByteMatrixVerification
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _ByteMatrixVerificationVersionNumber,
+                            _ByteMatrixVerificationVersionString ]
+    objc-classes:         [ _TtC22ByteMatrixVerification28BytesMatrixSignatureVerifier,
+                            _TtCC22ByteMatrixVerification28BytesMatrixSignatureVerifier21CKWP256ECDSAPublicKey,
+                            _TtCC22ByteMatrixVerification28BytesMatrixSignatureVerifier21CKWP256ECDSASignature ]
+...

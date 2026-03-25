@@ -1,0 +1,46 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/SLOM.framework/SLOM
+current-version:       1.19
+compatibility-version: 1.19
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _SLOMAttitudeStateOutputCreate,
+                            _SLOMAttitudeStateOutputGetRotation,
+                            _SLOMAttitudeStateOutputGetTimestamp,
+                            _SLOMAttitudeStateOutputIsValid,
+                            _SLOMAttitudeStateOutputRelease,
+                            _SLOMAttitudeStateOutputRetain,
+                            _SLOMCalibrationCreate, _SLOMCalibrationRelease,
+                            _SLOMCalibrationRetain, _SLOMConfigCreate,
+                            _SLOMConfigRelease, _SLOMConfigRetain, _SLOMGetVersion,
+                            _SLOMRefinedOutputCreate,
+                            _SLOMRefinedOutputGetPositionXY,
+                            _SLOMRefinedOutputGetPositionYaw,
+                            _SLOMRefinedOutputGetPositionZ,
+                            _SLOMRefinedOutputGetRotation,
+                            _SLOMRefinedOutputGetTimestamp,
+                            _SLOMRefinedOutputIsPoseValid,
+                            _SLOMRefinedOutputRelease, _SLOMRefinedOutputRetain,
+                            _SLOMSessionCopyLatestAttitudeStateOutput,
+                            _SLOMSessionCopyLatestRefinedOutput,
+                            _SLOMSessionCopyLatestStitchedOutput,
+                            _SLOMSessionCreate, _SLOMSessionPushAcceleration,
+                            _SLOMSessionPushGyroscope,
+                            _SLOMSessionPushIMUCalibrationAccelerometerBias,
+                            _SLOMSessionPushIMUCalibrationGyroscopeBias,
+                            _SLOMSessionPushIMUCalibrationGyroscopeScale,
+                            _SLOMSessionRelease, _SLOMSessionRetain,
+                            _SLOMStitchedOutputCreate,
+                            _SLOMStitchedOutputGetPositionXY,
+                            _SLOMStitchedOutputGetPositionYaw,
+                            _SLOMStitchedOutputGetPositionZ,
+                            _SLOMStitchedOutputGetRotation,
+                            _SLOMStitchedOutputGetTimestamp,
+                            _SLOMStitchedOutputIsPoseValid,
+                            _SLOMStitchedOutputRelease,
+                            _SLOMStitchedOutputRetain ]
+...

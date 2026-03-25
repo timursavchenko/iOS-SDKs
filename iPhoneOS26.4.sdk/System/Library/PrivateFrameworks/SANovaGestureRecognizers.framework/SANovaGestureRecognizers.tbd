@@ -1,0 +1,30 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/SANovaGestureRecognizers.framework/SANovaGestureRecognizers
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ SANDoubleHalfPressRecognizer, SANForceStageEvent,
+                            SANTouchSensitiveButtonEvent ]
+    objc-ivars:           [ SANDoubleHalfPressRecognizer._double_half_press_recognizer,
+                            SANForceStageEvent._forceProgress,
+                            SANForceStageEvent._forceStage,
+                            SANForceStageEvent._forceStageTransition,
+                            SANForceStageEvent._nextThreshold,
+                            SANForceStageEvent._phase,
+                            SANForceStageEvent._pressedThreshold,
+                            SANForceStageEvent._releasedThreshold,
+                            SANForceStageEvent._timestamp,
+                            SANTouchSensitiveButtonEvent._eventMask,
+                            SANTouchSensitiveButtonEvent._isTouching,
+                            SANTouchSensitiveButtonEvent._liftoffVelocity,
+                            SANTouchSensitiveButtonEvent._majorRadius,
+                            SANTouchSensitiveButtonEvent._phase,
+                            SANTouchSensitiveButtonEvent._positionDeltaY,
+                            SANTouchSensitiveButtonEvent._positionY,
+                            SANTouchSensitiveButtonEvent._timestamp ]
+...

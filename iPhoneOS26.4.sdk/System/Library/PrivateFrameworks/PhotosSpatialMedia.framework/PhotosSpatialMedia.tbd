@@ -1,0 +1,20 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/PhotosSpatialMedia.framework/PhotosSpatialMedia
+current-version:       842.0.102
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _PXSpatialPhotoConfigureMotionManager,
+                            _PXSpatialPhotoGetLog,
+                            _PXSpatialPhotoMetalLayerSetWantsIOSurfaceCompression,
+                            _PXSpatialPhotoWantsLightSourceReference ]
+    objc-classes:         [ _TtCE18PhotosSpatialMediaO22PhotosSpatialMediaCore12SpatialPhoto11MetalUIView,
+                            _TtCE18PhotosSpatialMediaO22PhotosSpatialMediaCore12SpatialPhoto11SceneUIView,
+                            _TtCE18PhotosSpatialMediaO22PhotosSpatialMediaCore12SpatialPhoto19SceneDebugHUDUIView,
+                            _TtCE18PhotosSpatialMediaO22PhotosSpatialMediaCore12SpatialPhoto22GenerationEffectUIView,
+                            _TtCE18PhotosSpatialMediaO22PhotosSpatialMediaCore12SpatialPhoto32SpatialPhotoSceneSecondaryUIView ]
+...

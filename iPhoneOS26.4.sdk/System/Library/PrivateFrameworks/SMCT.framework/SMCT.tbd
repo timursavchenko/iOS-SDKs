@@ -1,0 +1,17 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/SMCT.framework/SMCT
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _SMCTVersionNumber, _SMCTVersionString ]
+    objc-classes:         [ _TtC4SMCT11MotionScore, _TtC4SMCT13MotionFeature,
+                            _TtC4SMCT14MetalSingleton, _TtC4SMCT14MotionAssessor,
+                            _TtC4SMCT16ExtremeDisparity,
+                            _TtC4SMCT17ComfortBitUtility,
+                            _TtC4SMCT19MotionAssessorScore, _TtC4SMCT9Disparity ]
+...

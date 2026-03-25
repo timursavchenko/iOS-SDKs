@@ -1,0 +1,54 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/BatteryIntelligence.framework/BatteryIntelligence
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _BIBatteryAnalysisErrorDomain,
+                            _BatteryIntelligenceVersionNumber,
+                            _BatteryIntelligenceVersionString,
+                            _abbreviatedHourNSTimeIntervalFormatter,
+                            _abbreviatedNSTimeIntervalFormatter, _createLogger,
+                            _formatNSNumberAsPercentage, _getBatteryUISOC,
+                            _getMonotonicTimeInNanoSeconds,
+                            _isTimeTo80NotificationEnabled,
+                            _kBIFrameworkSubsystem, _percentFormatter ]
+    objc-classes:         [ BIBatteryAnalysisClient, BIBatteryAnalysisContainer,
+                            BIBatteryAnalysisManagerClient,
+                            BIBatteryAnalysisOutput,
+                            BIBatteryAnalysisSharedResources,
+                            BIBatteryAnalysisTargetDetails,
+                            BIChargeTimeEstimatorClient,
+                            BIChargeTimeEstimatorOutput ]
+    objc-ivars:           [ BIBatteryAnalysisClient._connection,
+                            BIBatteryAnalysisClient._delegate,
+                            BIBatteryAnalysisClient._logger,
+                            BIBatteryAnalysisClient._notificationTokens,
+                            BIBatteryAnalysisClient._queue,
+                            BIBatteryAnalysisClient._targetOutputs,
+                            BIBatteryAnalysisClient._targets,
+                            BIBatteryAnalysisContainer._error,
+                            BIBatteryAnalysisContainer._estimateObj,
+                            BIBatteryAnalysisContainer._lastUpdatedMonotonicTime,
+                            BIBatteryAnalysisManagerClient._connection,
+                            BIBatteryAnalysisManagerClient._logger,
+                            BIBatteryAnalysisOutput._additionalInformation,
+                            BIBatteryAnalysisOutput._confidenceScore,
+                            BIBatteryAnalysisOutput._endSOC,
+                            BIBatteryAnalysisOutput._estimate,
+                            BIBatteryAnalysisOutput._formattedEstimate,
+                            BIBatteryAnalysisOutput._isEstimateOverridden,
+                            BIBatteryAnalysisOutput._isFirstEstimate,
+                            BIBatteryAnalysisOutput._socAtEstimateTime,
+                            BIBatteryAnalysisTargetDetails._friendlyName,
+                            BIBatteryAnalysisTargetDetails._notificationName,
+                            BIChargeTimeEstimatorClient._logger,
+                            BIChargeTimeEstimatorOutput._additionalInformation,
+                            BIChargeTimeEstimatorOutput._confidenceScore,
+                            BIChargeTimeEstimatorOutput._endSOC,
+                            BIChargeTimeEstimatorOutput._estimate ]
+...

@@ -1,0 +1,19 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/SmartStackSettings.framework/SmartStackSettings
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _SmartStackSettingsVersionNumber,
+                            _SmartStackSettingsVersionString ]
+    objc-classes:         [ SSSDescriptorCollectionBox,
+                            _TtC18SmartStackSettings26AuthorizationServiceServer,
+                            _TtCC18SmartStackSettings26AuthorizationServiceServer16ClientConnection,
+                            _TtCC18SmartStackSettings30AuthorizationExtensionProvider8Observer,
+                            _TtCC18SmartStackSettings33CoreLocationAuthorizationProvider8Observer,
+                            _TtCCC18SmartStackSettings20AuthorizationService10Connection8Observer ]
+...

@@ -1,0 +1,26 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /usr/lib/rdma/libibumad.dylib
+current-version:       1
+compatibility-version: 1
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _sys_read_gid, _sys_read_guid, _sys_read_string,
+                            _sys_read_uint, _sys_read_uint64, _umad_addr_dump,
+                            _umad_attribute_str, _umad_class_str, _umad_close_port,
+                            _umad_common_mad_status_str, _umad_debug, _umad_done,
+                            _umad_dump, _umad_free_ca_device_list, _umad_get_ca,
+                            _umad_get_ca_device_list, _umad_get_ca_portguids,
+                            _umad_get_cas_names, _umad_get_fd, _umad_get_issm_path,
+                            _umad_get_mad, _umad_get_mad_addr, _umad_get_pkey,
+                            _umad_get_port, _umad_init, _umad_method_str,
+                            _umad_open_port, _umad_poll, _umad_recv, _umad_register,
+                            _umad_register2, _umad_register_oui, _umad_release_ca,
+                            _umad_release_port, _umad_sa_mad_status_str,
+                            _umad_send, _umad_set_addr, _umad_set_addr_net,
+                            _umad_set_grh, _umad_set_pkey, _umad_size,
+                            _umad_sort_ca_device_list, _umad_status,
+                            _umad_unregister ]
+...

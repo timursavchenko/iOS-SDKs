@@ -1,0 +1,46 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /usr/lib/libETLSAHDynamic.dylib
+current-version:       1
+compatibility-version: 1
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _ETLSAHCommandCreateDone,
+                            _ETLSAHCommandCreateHelloResponse,
+                            _ETLSAHCommandCreateHelloResponseExt,
+                            _ETLSAHCommandCreateMaverickConfigResponse,
+                            _ETLSAHCommandCreateMaverickEraseResponse,
+                            _ETLSAHCommandCreateMaverickHashResponse,
+                            _ETLSAHCommandCreateMaverickRootManifestResponse,
+                            _ETLSAHCommandCreateMemoryRead,
+                            _ETLSAHCommandCreateMemoryRead64Bit,
+                            _ETLSAHCommandCreateReset,
+                            _ETLSAHCommandCreateSwitchMode,
+                            _ETLSAHCommandExecute, _ETLSAHCommandExecuteCreate,
+                            _ETLSAHCommandExecuteDataCreate,
+                            _ETLSAHCommandExecuteParseResponse,
+                            _ETLSAHCommandMaverickParseEnd,
+                            _ETLSAHCommandParseChipID,
+                            _ETLSAHCommandParseCommandReady,
+                            _ETLSAHCommandParseDoneResponse,
+                            _ETLSAHCommandParseEndOfImageTransfer,
+                            _ETLSAHCommandParseHello,
+                            _ETLSAHCommandParseMaverickConfigQuery,
+                            _ETLSAHCommandParseMaverickEraseQuery,
+                            _ETLSAHCommandParseMaverickRootManifestQuery,
+                            _ETLSAHCommandParseMaverickSendHashesQuery,
+                            _ETLSAHCommandParseMemoryDebug,
+                            _ETLSAHCommandParseMemoryDebug64Bit,
+                            _ETLSAHCommandParseReadData,
+                            _ETLSAHCommandParseResetResponse,
+                            _ETLSAHCommandReceive, _ETLSAHCommandSend,
+                            _ETLSAHExecutionCommandIDAsString,
+                            _ETLSAHGetDebugRecordCount,
+                            _ETLSAHGetDebugRecordCount64Bit,
+                            _ETLSAHGetDebugTable, _ETLSAHGetDebugTable64Bit,
+                            _ETLSAHGetRecordEx, _ETLSAHGetRecordEx64Bit,
+                            _ETLSAHModeAsString, _ETLSAHReturnAsString,
+                            _ETLSAHSendReadData ]
+...

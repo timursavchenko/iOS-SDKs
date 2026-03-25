@@ -1,0 +1,15 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/SupportFlowUI.framework/SupportFlowUI
+current-version:       36.4.4
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    objc-classes:         [ _TtC13SupportFlowUI25SupportFlowViewController,
+                            _TtC13SupportFlowUI28SupportFlowHostingController,
+                            _TtC13SupportFlowUI31SupportFlowServiceSpecification,
+                            _TtC13SupportFlowUI33SupportFlowSceneHostingController ]
+...

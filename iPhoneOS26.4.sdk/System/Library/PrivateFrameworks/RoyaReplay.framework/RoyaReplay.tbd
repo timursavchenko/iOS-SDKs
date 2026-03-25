@@ -1,0 +1,23 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/RoyaReplay.framework/RoyaReplay
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _RoyaReplayVersionNumber, _RoyaReplayVersionString ]
+    objc-classes:         [ EmbeddedNPoCCVPixelBufferSource,
+                            EmbeddedNPoCDeviceMotionSource,
+                            EmbeddedNPoCSessionBase, EmbeddedNPoCSimpleSource,
+                            EmbeddedNPoCSource ]
+    objc-ivars:           [ EmbeddedNPoCCVPixelBufferSource._config,
+                            EmbeddedNPoCCVPixelBufferSource._converter,
+                            EmbeddedNPoCSessionBase._sources,
+                            EmbeddedNPoCSimpleSource._nextError,
+                            EmbeddedNPoCSimpleSource._nextSample,
+                            EmbeddedNPoCSource._source ]
+    weak-def-symbols:     [ _OBJC_EHTYPE_$_NSError ]
+...

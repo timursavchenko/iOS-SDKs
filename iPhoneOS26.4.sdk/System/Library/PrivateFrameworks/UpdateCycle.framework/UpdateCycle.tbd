@@ -1,0 +1,27 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/UpdateCycle.framework/UpdateCycle
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _UCCoallocNVars, _UCDriverActivate, _UCDriverCheck,
+                            _UCDriverCurrentMode, _UCDriverDeinit,
+                            _UCDriverEnterMode, _UCDriverInit, _UCDriverInitSize,
+                            _UCDriverNextStep, _UCDriverRequestReturn,
+                            _UCDriverReset, _UCDriverReturnRequested,
+                            _UCDriverSetLoopTap, _UCDriverSetMask,
+                            _UCDriverSetMode, _UCDriverSetNextStep,
+                            _UCDriverSignal, _UCDriverTimerArm,
+                            _UCDriverTimerCancel, _UCDriverUpdateMask,
+                            _UCLoopTapCFRunLoopAddToMode,
+                            _UCLoopTapCFRunLoopDeinit,
+                            _UCLoopTapCFRunLoopGetLoopTapImpl,
+                            _UCLoopTapCFRunLoopInit, _UCLoopTapCFRunLoopInitSize,
+                            _UCLoopTapCFRunLoopRemoveFromMode,
+                            _UCTimeFromSeconds, _UCTimeNow, _UCTimeToSeconds,
+                            _UCTimeUnitSeconds ]
+...

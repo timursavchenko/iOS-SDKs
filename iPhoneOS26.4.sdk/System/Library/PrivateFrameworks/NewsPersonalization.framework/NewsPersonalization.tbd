@@ -1,0 +1,27 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/NewsPersonalization.framework/NewsPersonalization
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _NPDeviceSupportsFeedPersonalization,
+                            _NewsPersonalizationVersionNumber,
+                            _NewsPersonalizationVersionString ]
+    objc-classes:         [ NAPAssembly, NXAssembly,
+                            _TtC19NewsPersonalization20XavierScoringService,
+                            _TtC19NewsPersonalization22DiagnosticFileProvider,
+                            _TtC19NewsPersonalization23AppUserEmbeddingManager,
+                            _TtC19NewsPersonalization26RecipeAutoFavoritesManager,
+                            _TtC19NewsPersonalization27NewsAppConfigurationManager,
+                            _TtC19NewsPersonalization28ComputeServiceScoringService,
+                            _TtC19NewsPersonalization29ClearableUserEmbeddingManager,
+                            _TtC19NewsPersonalization29ComputeServiceUnloaderService,
+                            _TtC19NewsPersonalization33ComputeServiceProxyScoringService,
+                            _TtC19NewsPersonalization33EmptyPersonalizationDataGenerator,
+                            _TtC19NewsPersonalization38NewsComputationalGraphRequestProcessor,
+                            _TtC19NewsPersonalization43EventHistoryAggregateStoreStateModeResolver ]
+...

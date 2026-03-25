@@ -1,0 +1,29 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/SpotlightDiagnostics.framework/SpotlightDiagnostics
+current-version:       2418.4.13
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _SDError, _SDGetActiveUID, _SDIsAppleInternalInstall,
+                            _SDLogCategoryClient, _SDLogCategoryExtension,
+                            _SDLogCategoryHelper, _SDLogCategoryUserHelper,
+                            _SDSearchDirectory, _SpotlightDiagnosticErrorDomain,
+                            _SpotlightDiagnosticsVersionNumber,
+                            _SpotlightDiagnosticsVersionString ]
+    objc-classes:         [ SDCoreSpotlightDiagnosticClient, SDDiagnosticClient,
+                            SDDiagnosticClientSet ]
+    objc-ivars:           [ SDCoreSpotlightDiagnosticClient._bundleID,
+                            SDCoreSpotlightDiagnosticClient._index,
+                            SDCoreSpotlightDiagnosticClient._managed,
+                            SDCoreSpotlightDiagnosticClient._path,
+                            SDCoreSpotlightDiagnosticClient._private,
+                            SDCoreSpotlightDiagnosticClient._protectionClass,
+                            SDCoreSpotlightDiagnosticClient._testIndex,
+                            SDDiagnosticClientSet._defaultClients,
+                            SDDiagnosticClientSet._managedClients,
+                            SDDiagnosticClientSet._privateClients ]
+...

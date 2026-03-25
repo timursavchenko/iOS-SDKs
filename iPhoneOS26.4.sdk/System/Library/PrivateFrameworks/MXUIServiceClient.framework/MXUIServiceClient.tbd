@@ -1,0 +1,32 @@
+--- !tapi-tbd-v3
+archs:                 [ armv7, armv7s, arm64, arm64e ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/MXUIServiceClient.framework/MXUIServiceClient
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ armv7, armv7s, arm64, arm64e ]
+    symbols:              [ _MXUIServiceClientVersionNumber,
+                            _MXUIServiceClientVersionString,
+                            _MXUIService_BackgroundActivityIdentifierCarPlayVideo,
+                            _MXUIService_CommonButtonParam_ConnectionType,
+                            _MXUIService_CommonButtonParam_HeadsetString,
+                            _MXUIService_CommonButtonParam_RouteToCar,
+                            _MXUIService_CommonButtonParam_UUID,
+                            _MXUIService_CommonButtonResponse_BannerTimeout,
+                            _MXUIService_CommonButtonResponse_ButtonPressed,
+                            _MXUIService_Domain, _MXUIService_MachName,
+                            _MXUIService_ProtocolServiceName ]
+    objc-classes:         [ MXUIService_Client, MXUIService_ServerDelegate,
+                            MXUIService_ServerListener ]
+    objc-ivars:           [ MXUIService_Client._connection,
+                            MXUIService_Client._endpoint,
+                            MXUIService_Client._lock,
+                            MXUIService_Client._shouldCreateConnection,
+                            MXUIService_ServerDelegate._queue,
+                            MXUIService_ServerDelegate._uiDelegate,
+                            MXUIService_ServerListener._delegate,
+                            MXUIService_ServerListener._listener ]
+...

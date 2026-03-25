@@ -1,0 +1,297 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.4 clang-2100.0.123.2)
+// swift-module-flags: -target arm64e-apple-ios26.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -library-level api -enable-upcoming-feature MemberImportVisibility -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -user-module-version 324.25.1.2 -module-name AccessoryTransportExtension
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
+import AccessorySetupKit.ASAccessory
+import AccessorySetupKit
+import CryptoKit
+import ExtensionFoundation
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+@available(iOS 26.2, *)
+public protocol AccessoryTransportAppExtension : ExtensionFoundation.AppExtension {
+  func accept(sessionRequest: AccessoryTransportExtension.AccessoryTransportSession.Request) -> AccessoryTransportExtension.AccessoryTransportSession.Request.Decision
+}
+@available(iOS 26.2, *)
+@_Concurrency.MainActor extension AccessoryTransportExtension.AccessoryTransportAppExtension {
+  @_Concurrency.MainActor public var configuration: some AccessoryTransportExtension.AccessoryTransportExtensionConfiguration {
+    get
+  }
+}
+@available(iOS 26.2, *)
+public protocol AccessoryTransportExtensionConfiguration : ExtensionFoundation.AppExtensionConfiguration {
+}
+@available(iOS 26.4, *)
+public struct AccessoryMessage : Swift.Identifiable, Swift.Sendable {
+  public let id: Foundation.UUID
+  public let payloads: [AccessoryTransportExtension.AccessoryMessage.Payload]
+  public enum Transport : Swift.Int, Swift.Sendable, Swift.Hashable {
+    case bluetooth
+    case internet
+    public init?(rawValue: Swift.Int)
+    @available(iOS 26.4, *)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum Size : Swift.Int, Swift.Sendable {
+    case small
+    case medium
+    case large
+    case extraLarge
+    public init?(rawValue: Swift.Int)
+    @available(iOS 26.4, *)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public struct Payload : Swift.Sendable {
+    public let data: Foundation.Data
+    public let transport: AccessoryTransportExtension.AccessoryMessage.Transport
+    public init(transport: AccessoryTransportExtension.AccessoryMessage.Transport, data: Foundation.Data)
+  }
+  public init(@AccessoryTransportExtension.AccessoryMessage.Builder _ builder: () -> AccessoryTransportExtension.AccessoryMessage)
+  @_functionBuilder public struct Builder {
+    public static func buildBlock(_ components: AccessoryTransportExtension.AccessoryMessage.Payload...) -> AccessoryTransportExtension.AccessoryMessage
+  }
+  @available(iOS 26.4, *)
+  public typealias ID = Foundation.UUID
+}
+@available(iOS 26.2, *)
+extension AccessoryTransportExtension.AccessoryTransportSession {
+  public enum Error : Swift.Error, Swift.CustomStringConvertible {
+    case unknown
+    case invalidated
+    case unsupported
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: AccessoryTransportExtension.AccessoryTransportSession.Error, b: AccessoryTransportExtension.AccessoryTransportSession.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+@available(iOS 26.4, *)
+public protocol AccessoryDataProvider : ExtensionFoundation.AppExtension, Swift.Sendable where Self.Configuration : AccessoryTransportExtension.AccessoryDataProviderConfiguration {
+}
+@available(iOS 26.4, *)
+@_Concurrency.MainActor extension AccessoryTransportExtension.AccessoryDataProvider {
+  @_Concurrency.MainActor public var configuration: some AccessoryTransportExtension.AccessoryDataProviderConfiguration {
+    get
+  }
+}
+@available(iOS 26.4, *)
+public protocol AccessoryDataProviderConfiguration : ExtensionFoundation.AppExtensionConfiguration {
+}
+@_hasMissingDesignatedInitializers @available(iOS 26.2, *)
+public class AccessoryTransportSession : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public func cancel(error: AccessoryTransportExtension.AccessoryTransportSession.Error?)
+  @available(iOS 26.4, *)
+  public func sendData(_ data: Foundation.Data, featureID: Swift.String) throws(AccessoryTransportExtension.AccessoryTransportSession.Error)
+  @objc deinit
+}
+@available(iOS 26.2, *)
+extension AccessoryTransportExtension.AccessoryTransportSession {
+  public protocol EventHandler {
+    @available(iOS 26.4, *)
+    func dataEventHandler(event: AccessoryTransportExtension.AccessoryTransportSession.DataEvent)
+    func invalidationHandler(error: AccessoryTransportExtension.AccessoryTransportSession.Error?)
+  }
+}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessoryTransportSession.EventHandler {
+  public func dataEventHandler(event: AccessoryTransportExtension.AccessoryTransportSession.DataEvent)
+}
+@available(iOS 26.2, *)
+extension AccessoryTransportExtension.AccessoryTransportSession {
+  @_hasMissingDesignatedInitializers final public class Request {
+    public struct Decision {
+    }
+    final public let session: AccessoryTransportExtension.AccessoryTransportSession
+    final public func accept<Handler>(_ sessionRequestHandler: () -> Handler) -> AccessoryTransportExtension.AccessoryTransportSession.Request.Decision where Handler : AccessoryTransportExtension.AccessoryTransportSession.EventHandler
+    final public func reject(error: AccessoryTransportExtension.AccessoryTransportSession.Error?) -> AccessoryTransportExtension.AccessoryTransportSession.Request.Decision
+    @objc deinit
+  }
+}
+@available(iOS 26.4, *)
+public protocol AccessoryFeature : Swift.Sendable, ExtensionFoundation.AppExtensionPoint.Capability {
+  associatedtype Handler
+  typealias HandlerFactory = @Sendable () -> Self.Handler
+  static var featureID: Swift.String { get }
+  init(_ handlerFactory: @escaping Self.HandlerFactory)
+}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessoryFeature {
+  public var id: Swift.String {
+    get
+  }
+}
+@available(iOS 26.4, *)
+public protocol AccessoryFeatureSession : Swift.Sendable {
+  func invalidate()
+  func messageHandler(_ message: AccessoryTransportExtension.AccessoryMessage)
+}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessoryFeatureSession {
+  public func invalidate()
+  public func sendMessage(_ accessoryMessage: AccessoryTransportExtension.AccessoryMessage) async throws
+}
+@_hasMissingDesignatedInitializers @available(iOS 26.4, *)
+public class AccessorySecuritySession : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public func cancel(error: (any Swift.Error)?)
+  @available(iOS 26.4, *)
+  public func sendSecurityEvent(_ event: AccessoryTransportExtension.AccessorySecurity.Event) throws
+  @objc deinit
+}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessorySecuritySession {
+  public protocol EventHandler {
+    @available(iOS 26.4, *)
+    func securityEventHandler(event: AccessoryTransportExtension.AccessorySecurity.Event)
+    func invalidationHandler(error: (any Swift.Error)?)
+  }
+}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessorySecuritySession {
+  @_hasMissingDesignatedInitializers final public class Request {
+    public struct Decision {
+    }
+    final public let session: AccessoryTransportExtension.AccessorySecuritySession
+    final public func accept<Handler>(_ sessionRequestHandler: () -> Handler) -> AccessoryTransportExtension.AccessorySecuritySession.Request.Decision where Handler : AccessoryTransportExtension.AccessorySecuritySession.EventHandler
+    final public func reject(error: (any Swift.Error)?) -> AccessoryTransportExtension.AccessorySecuritySession.Request.Decision
+    @objc deinit
+  }
+}
+@available(iOS 26.4, *)
+public protocol AccessoryTransportSecurity : ExtensionFoundation.AppExtension {
+  func accept(sessionRequest: AccessoryTransportExtension.AccessorySecuritySession.Request) -> AccessoryTransportExtension.AccessorySecuritySession.Request.Decision
+}
+@available(iOS 26.4, *)
+@_Concurrency.MainActor extension AccessoryTransportExtension.AccessoryTransportSecurity {
+  @_Concurrency.MainActor public var configuration: some AccessoryTransportExtension.AccessoryTransportSecurityConfiguration {
+    get
+  }
+}
+@available(iOS 26.4, *)
+public protocol AccessoryTransportSecurityConfiguration : ExtensionFoundation.AppExtensionConfiguration {
+}
+@available(iOS 26.4, *)
+public struct AccessorySecurity {
+  public enum Error : Swift.Error, Swift.CustomStringConvertible {
+    case missingKeyMaterial
+    case missingSecret
+    case encryptionFailed(Swift.String)
+    case decryptionFailed(Swift.String)
+    public var description: Swift.String {
+      get
+    }
+  }
+}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessorySecurity {
+  public enum Event : Swift.CustomStringConvertible, Swift.Codable {
+    case keyRequest
+    case keyReply(ciphersuite: AccessoryTransportExtension.AccessorySecurity.Crypto.Ciphersuite, publicKey: Foundation.Data)
+    case keyExchange(keyMaterial: AccessoryTransportExtension.AccessorySecurity.Crypto.KeyMaterial)
+    case encapsulatedKey(Foundation.Data)
+    public var description: Swift.String {
+      get
+    }
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessorySecurity {
+  public struct Crypto {
+    public enum Ciphersuite : Swift.CustomStringConvertible, Swift.Codable {
+      case P256
+      case XWing
+      public var description: Swift.String {
+        get
+      }
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+      public enum Version : Swift.CustomStringConvertible, Swift.Codable {
+        case v1
+        public var description: Swift.String {
+          get
+        }
+        public func encode(to encoder: any Swift.Encoder) throws
+        public init(from decoder: any Swift.Decoder) throws
+        public static func == (a: AccessoryTransportExtension.AccessorySecurity.Crypto.Ciphersuite.Version, b: AccessoryTransportExtension.AccessorySecurity.Crypto.Ciphersuite.Version) -> Swift.Bool
+        public func hash(into hasher: inout Swift.Hasher)
+        public var hashValue: Swift.Int {
+          get
+        }
+      }
+      public static func == (a: AccessoryTransportExtension.AccessorySecurity.Crypto.Ciphersuite, b: AccessoryTransportExtension.AccessorySecurity.Crypto.Ciphersuite) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public struct KeyMaterial : Swift.CustomStringConvertible, Swift.Codable {
+      public let identifier: Swift.String
+      public let ciphersuite: AccessoryTransportExtension.AccessorySecurity.Crypto.Ciphersuite
+      public let version: AccessoryTransportExtension.AccessorySecurity.Crypto.Ciphersuite.Version
+      public let publicKey: Foundation.Data
+      public var encapsulatedKey: Foundation.Data
+      public var description: Swift.String {
+        get
+      }
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+  }
+}
+@available(iOS 26.4, *)
+extension Foundation.NSXPCConnection : @unchecked @retroactive Swift.Sendable {
+}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessoryTransportSession {
+  public enum DataEvent : Swift.CustomStringConvertible, Swift.Codable {
+    case plaintext(data: Foundation.Data, featureID: Swift.String)
+    case ciphertext(data: Foundation.Data, featureID: Swift.String)
+    public var description: Swift.String {
+      get
+    }
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessoryMessage.Transport : Swift.RawRepresentable {}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessoryMessage.Size : Swift.Equatable {}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessoryMessage.Size : Swift.Hashable {}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessoryMessage.Size : Swift.RawRepresentable {}
+@available(iOS 26.2, *)
+extension AccessoryTransportExtension.AccessoryTransportSession.Error : Swift.Equatable {}
+@available(iOS 26.2, *)
+extension AccessoryTransportExtension.AccessoryTransportSession.Error : Swift.Hashable {}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessorySecurity.Crypto.Ciphersuite : Swift.Equatable {}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessorySecurity.Crypto.Ciphersuite : Swift.Hashable {}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessorySecurity.Crypto.Ciphersuite.Version : Swift.Equatable {}
+@available(iOS 26.4, *)
+extension AccessoryTransportExtension.AccessorySecurity.Crypto.Ciphersuite.Version : Swift.Hashable {}
